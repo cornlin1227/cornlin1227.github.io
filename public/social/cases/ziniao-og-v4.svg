@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07142f"/><stop offset=".58" stop-color="#0d2a6c"/><stop offset="1" stop-color="#3569fd"/></linearGradient><pattern id="gr" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#fff" stroke-opacity=".065"/></pattern></defs>
+  <rect width="1200" height="630" fill="url(#b)"/><rect width="1200" height="630" fill="url(#gr)"/>
+  <text x="58" y="61" fill="#9ec0ff" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="3">05 / COMPLEX B2B PRODUCT SYSTEM</text>
+  <text x="55" y="274" fill="#fff" font-family="PingFang SC,Helvetica Neue,Arial,sans-serif" font-size="88" font-weight="700">紫鸟浏览器</text>
+  <text x="60" y="334" fill="#9ec0ff" font-family="Helvetica Neue,Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="3">ONE WORKSPACE</text>
+  <g transform="translate(732 106)" fill="none" stroke="#fff"><rect x="0" y="0" width="382" height="278" rx="14" stroke-opacity=".16"/><rect x="-42" y="52" width="382" height="278" rx="14" stroke-opacity=".3"/><rect x="-84" y="104" width="382" height="278" rx="14" stroke-opacity=".52"/><rect x="-126" y="156" width="382" height="278" rx="14" stroke-opacity=".9" stroke-width="2"/><path d="M-126 202H256" stroke-opacity=".9" stroke-width="2"/><circle cx="-100" cy="179" r="5" fill="#ff6b61" stroke="none"/><circle cx="-83" cy="179" r="5" fill="#ffc15a" stroke="none"/><circle cx="-66" cy="179" r="5" fill="#51cc78" stroke="none"/></g>
+  <path d="M60 416H548" stroke="#9ec0ff" stroke-opacity=".4"/>
+  <g transform="translate(60 447)" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2"><text>STORE</text><text x="112">IP</text><text x="184">MEMBER</text><text x="322">SECURITY</text></g>
+  <text x="58" y="579" fill="#9ec0ff" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" letter-spacing="2">2021.03 · UI DESIGN</text><text x="1142" y="579" text-anchor="end" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2">ORDER / SCALE / CONTROL</text>
+</svg>

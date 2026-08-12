@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><radialGradient id="yesoulGlow"><stop stop-color="#ff3545" stop-opacity=".17"/><stop offset="1" stop-color="#ff3545" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1200" height="630" fill="#f2eee5"/><circle cx="890" cy="275" r="350" fill="url(#yesoulGlow)"/>
+  <path d="M0 92H1200M60 0V630M760 92V630" stroke="#181515" stroke-opacity=".22"/>
+  <rect x="60" y="92" width="18" height="446" fill="#ff3545"/>
+  <text x="96" y="61" fill="#181515" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="3">CASE 03 · RESEARCH-LED PRODUCT REDESIGN</text>
+  <text x="105" y="240" fill="#181515" font-family="Helvetica Neue,Arial,sans-serif" font-size="105" font-weight="800" letter-spacing="-7">YESOUL</text>
+  <text x="105" y="316" fill="#181515" font-family="PingFang SC,Helvetica Neue,Arial,sans-serif" font-size="42" font-weight="600">从“内容很多”</text>
+  <text x="105" y="370" fill="#ff3545" font-family="PingFang SC,Helvetica Neue,Arial,sans-serif" font-size="42" font-weight="700">到“下一步很清楚”</text>
+  <text x="105" y="432" fill="#55504d" font-family="PingFang SC,Helvetica Neue,Arial,sans-serif" font-size="18">研究不是章节，而是界面结构成立的证据。</text>
+  <g transform="translate(810 142)" font-family="Helvetica Neue,Arial,sans-serif">
+    <circle cx="154" cy="154" r="150" fill="none" stroke="#ff3545" stroke-opacity=".22"/><circle cx="154" cy="154" r="104" fill="none" stroke="#ff3545" stroke-opacity=".38"/><circle cx="154" cy="154" r="56" fill="#ff3545"/>
+    <circle cx="154" cy="4" r="7" fill="#ff3545"/><circle cx="303" cy="154" r="7" fill="#ff3545"/><circle cx="154" cy="304" r="7" fill="#ff3545"/>
+    <text x="154" y="145" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" letter-spacing="2">START</text><text x="154" y="174" text-anchor="middle" fill="#fff" font-size="21" font-weight="800">MOVING</text>
+  </g>
+  <g transform="translate(105 520)" font-family="Helvetica Neue,Arial,sans-serif"><text x="0" y="28" fill="#ff3545" font-size="28" font-weight="800">14</text><text x="48" y="27" fill="#55504d" font-size="11" letter-spacing="2">USER INTERVIEWS</text><path d="M220 0V40" stroke="#181515" stroke-opacity=".25"/><text x="252" y="28" fill="#ff3545" font-size="28" font-weight="800">03</text><text x="300" y="27" fill="#55504d" font-size="11" letter-spacing="2">CORE SCENARIOS</text><path d="M476 0V40" stroke="#181515" stroke-opacity=".25"/><text x="508" y="28" fill="#ff3545" font-size="28" font-weight="800">01</text><text x="556" y="27" fill="#55504d" font-size="11" letter-spacing="2">EXPERIENCE STRATEGY</text></g>
+  <text x="1086" y="584" text-anchor="end" fill="#77716d" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" letter-spacing="2">2022.09</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><pattern id="p" width="112" height="112" patternUnits="userSpaceOnUse"><text x="8" y="79" fill="#0b0d12" fill-opacity=".085" font-family="Helvetica Neue,Arial,sans-serif" font-size="66" font-weight="800">(N)</text></pattern></defs>
+  <rect width="1200" height="630" fill="#f0f2f5"/><rect x="640" width="560" height="630" fill="#f7931a"/><rect x="640" width="560" height="630" fill="url(#p)"/><path d="M0 92H1200M640 0V630" stroke="#0b0d12" stroke-width="2"/>
+  <text x="58" y="61" fill="#0b0d12" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="3">02 / BRAND IDENTITY SYSTEM</text>
+  <text x="55" y="294" fill="#0b0d12" font-family="Helvetica Neue,Arial,sans-serif" font-size="116" font-weight="800" letter-spacing="-7">ON</text><text x="55" y="403" fill="#0b0d12" font-family="Helvetica Neue,Arial,sans-serif" font-size="116" font-weight="800" letter-spacing="-7">NEXUS</text>
+  <text x="58" y="463" fill="#0b0d12" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="2">BOUNDARY · NODE · CONNECTION</text>
+  <text x="920" y="397" text-anchor="middle" fill="#0b0d12" font-family="Helvetica Neue,Arial,sans-serif" font-size="264" font-weight="800" letter-spacing="-38">(N)</text>
+  <path d="M742 432H1098" stroke="#0b0d12" stroke-width="2"/><circle cx="920" cy="432" r="7" fill="#f0f2f5" stroke="#0b0d12" stroke-width="2"/>
+  <text x="58" y="579" fill="#0b0d12" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" letter-spacing="2">2026.04</text><text x="1142" y="579" text-anchor="end" fill="#0b0d12" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2">THE SYSTEM BEGINS WITH (N)</text>
+</svg>

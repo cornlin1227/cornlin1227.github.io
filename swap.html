@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Swap On Nexus UI/UE 升级案例 — Simon 产品体验设计作品集" />
+  <meta name="theme-color" content="#07070a" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Swap On Nexus — DEX Experience Redesign" />
+  <meta property="og:description" content="从协议复杂性到行动清晰度：以一次兑换为中心重构 DEX 产品体验。" />
+  <meta property="og:image" content="/public/social/cases/swap-og-v4.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Swap On Nexus — DEX Experience Redesign" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/public/social/cases/swap-og-v4.jpg" />
+  <meta name="twitter:image:alt" content="Swap On Nexus — DEX Experience Redesign" />
+  <title>Swap On Nexus — Simon Portfolio</title>
+  <link rel="icon" type="image/png" href="/public/favicon.png" />
+  <link rel="stylesheet" href="/app/globals.css?v=20260804r" />
+  <script src="/app/enhancements.js?v=20260811a" defer></script>
+  <script src="/public/vendor/gsap.min.js?v=3.13.0" defer></script>
+  <script src="/public/vendor/ScrollTrigger.min.js?v=3.13.0" defer></script>
+  <script src="/app/case-motion.js?v=20260804v" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#swap-case">跳到案例正文</a>
+  <main class="swap-page" id="swap-case">
+    <div class="swap-progress" aria-hidden="true"></div>
+    <header class="swap-nav">
+      <a href="/index.html#index">← INDEX</a>
+      <span>CASE 01 / SWAP ON NEXUS</span>
+      <a href="mailto:lzp19961227@foxmail.com">CONTACT ↗</a>
+    </header>
+
+    <section class="swap-hero" id="swap-top">
+      <div class="swap-ambient-field" aria-hidden="true"><i></i><i></i><i></i><i></i><span></span></div>
+      <div class="swap-grid" aria-hidden="true"></div>
+      <div class="swap-orbit orbit-a" aria-hidden="true"></div>
+      <div class="swap-orbit orbit-b" aria-hidden="true"></div>
+      <div class="swap-hero-meta">
+        <span>DEX EXPERIENCE REDESIGN</span>
+        <span>PRODUCT STRATEGY · UI/UE · WEB3</span>
+      </div>
+      <div class="swap-hero-title">
+        <small>FROM PROTOCOL COMPLEXITY TO ACTION CLARITY</small>
+        <h1><span>SWAP</span><em>ON</em><b>NEXUS</b></h1>
+        <p>把被营销首页、协议入口和历史信息包围的交易产品，<br />重构为以一次兑换为中心的清晰体验。</p>
+      </div>
+      <div class="swap-route" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </div>
+      <div class="swap-hero-screens">
+        <div class="swap-product-glow" aria-hidden="true"></div>
+        <figure class="swap-hero-primary">
+          <div class="swap-product-browserbar" aria-hidden="true"><i></i><i></i><i></i><span></span></div>
+          <div class="swap-product-viewport"><img width="2560" height="1155" fetchpriority="high" decoding="async" src="/public/swap/after-swap.jpg?v=20260724x" alt="Swap On Nexus 改版后交易首页" /></div>
+        </figure>
+      </div>
+      <div class="swap-hero-foot">
+        <span><b>01</b>去掉首页绕行</span>
+        <span><b>02</b>重组复杂协议</span>
+        <span><b>03</b>建立视觉秩序</span>
+      </div>
+    </section>
+    <div class="swap-proofline" aria-label="Swap On Nexus 项目信息"><span><small>TIME / 项目时间</small><b>2025.06</b></span><span><small>ROLE / 个人角色</small><b>独立负责全链路设计</b></span><span><small>SCOPE / 负责范围</small><b>产品策略 · UE · UI · 动效</b></span><span><small>STATUS / 落地状态</small><b>已上线</b></span></div>
+    <nav class="case-fastlane case-fastlane-dark" aria-label="案例快速浏览"><a href="#swap-problem"><small>READ THE PROCESS</small><b>查看问题与决策</b><span>↓</span></a><a href="#swap-result"><small>SKIP TO FINAL</small><b>直达最终产品</b><span>↓</span></a></nav>
+
+    <aside class="swap-rail" aria-label="案例章节">
+      <a href="#swap-problem"><b>01</b><span>Problem</span></a>
+      <a href="#swap-strategy"><b>02</b><span>Strategy</span></a>
+      <a href="#swap-iteration"><b>03</b><span>Iteration</span></a>
+      <a href="#swap-result"><b>04</b><span>Result</span></a>
+      <a href="#swap-system"><b>05</b><span>System</span></a>
+    </aside>
+
+    <section class="swap-problem" id="swap-problem">
+      <div class="swap-section-no" data-swap-reveal><b>01</b><span>DIAGNOSIS / 问题诊断</span></div>
+      <div class="swap-problem-head" data-swap-reveal>
+        <h2>用户想兑换，<br />产品却先让他<br /><em>理解产品。</em></h2>
+        <p>旧版首先呈现品牌叙事、版本切换、链切换与大量导航。真正的交易入口被放在第二步，协议差异又继续侵入交易过程，视觉氛围强烈，但任务层级不清楚。</p>
+      </div>
+      <div class="swap-friction-board" data-swap-reveal>
+        <article><small>01 / DETOUR</small><strong>营销首页<br />挡在交易之前</strong><p>核心用户已经带着明确目标而来，却需要先经过展示页再进入 Swap。</p></article>
+        <article><small>02 / NAVIGATION</small><strong>导航承载<br />过多产品概念</strong><p>版本、链、市场、工具与文档同时争夺注意力，用户先识别系统，再寻找任务。</p></article>
+        <article><small>03 / PROTOCOL</small><strong>协议结构<br />暴露给用户</strong><p>RUNES、BRC20、ARC20 与不同支付通道分散在多个入口中。</p></article>
+        <article><small>04 / NOISE</small><strong>次要信息<br />持续占据首屏</strong><p>价格图、持币榜、个人记录与全站记录同时出现，削弱兑换本身。</p></article>
+      </div>
+      <div class="swap-diagnosis-line" data-swap-reveal>
+        <span>视觉冲击</span><i>≠</i><span>任务清晰</span><b>产品需要从“解释系统”转向“帮助完成交易”。</b>
+      </div>
+    </section>
+
+    <section class="swap-strategy" id="swap-strategy">
+      <div class="swap-section-no light" data-swap-reveal><b>02</b><span>STRATEGY / 重构策略</span></div>
+      <div class="swap-strategy-intro" data-swap-reveal>
+        <small>THE REDESIGN WAS NOT A RESKIN</small>
+        <h2>先减法，<br />再重组。</h2>
+        <p>方案从信息结构与关键路径入手：删除不必要的前置步骤，把重复信息合并，把低频信息收起，并把协议选择放回最符合用户心智的位置。</p>
+      </div>
+      <div class="swap-verb-grid">
+        <article data-swap-reveal><b>REMOVE</b><h3>删除</h3><p>取消原首页、V1 独立切换与顶部链切换，让用户进入产品后直接开始兑换。</p><span>HOME → SWAP</span></article>
+        <article data-swap-reveal><b>MERGE</b><h3>合并</h3><p>个人记录与全站记录合并为一个记录区域；通道、账户与余额归入资产视图。</p><span>2 RECORDS → 1 VIEW</span></article>
+        <article data-swap-reveal><b>HIDE</b><h3>收起</h3><p>价格图、交易记录、服务费和网络费按需展开，默认首屏只保留决策必需信息。</p><span>ALWAYS ON → ON DEMAND</span></article>
+        <article data-swap-reveal><b>RELOCATE</b><h3>归位</h3><p>协议类型进入代币选择层，V1 退回支付方式，复杂性被放到最恰当的决策节点。</p><span>SYSTEM FIRST → TASK FIRST</span></article>
+      </div>
+      <div class="swap-paths" data-swap-reveal>
+        <div><small>BEFORE</small><span>首页</span><i>→</i><span>找到交易</span><i>→</i><span>选择协议</span><i>→</i><span>理解通道</span><i>→</i><b>兑换</b></div>
+        <div><small>AFTER</small><b>打开即兑换</b><i>→</i><span>按需选择代币与支付方式</span></div>
+      </div>
+      <div class="swap-route-audit" id="swap-route-audit" data-swap-reveal>
+        <div class="swap-route-audit-head">
+          <small>MULTI-ROUTE EXPERIENCE AUDIT</small>
+          <h3>改版发生在整条产品路径，<br />而不只发生在首页。</h3>
+          <p>从两个站点的产品结构和第一阶段升级方案出发，逐页拆解交易、选币、流动性、发现、奖励、资产和历史记录。每一页都围绕同一个原则：主任务前置，复杂信息按需出现。</p>
+        </div>
+        <div class="swap-route-audit-grid">
+          <article>
+            <b>01 / SWAP</b>
+            <h4>交易路由</h4>
+            <div><small>BEFORE</small><p>营销首页先行；图表、榜单、个人记录与全站记录同时争夺首屏。</p></div>
+            <div><small>AFTER</small><p>打开即 Pay / Receive；图表、记录、服务费与网络费根据状态展开。</p></div>
+          </article>
+          <article>
+            <b>02 / TOKEN SELECTOR</b>
+            <h4>选币与网络</h4>
+            <div><small>BEFORE</small><p>协议和链切换散落在导航及交易框之外，用户先理解系统结构。</p></div>
+            <div><small>AFTER</small><p>RUNES、BRC20、Stablecoin、Fractal、ARC20 归入选币层，并标注协议类型。</p></div>
+          </article>
+          <article>
+            <b>03 / POOLS</b>
+            <h4>流动性路由</h4>
+            <div><small>BEFORE</small><p>池子、个人记录、全站记录与网络费长期展开，阅读负担持续存在。</p></div>
+            <div><small>AFTER</small><p>池子与记录可收起；筛选、注入、兑换和费率说明使用统一交互语言。</p></div>
+          </article>
+          <article>
+            <b>04 / EXPLORE</b>
+            <h4>市场发现</h4>
+            <div><small>BEFORE</small><p>市场、文档和奖励入口分散，表格操作大量依赖重复文字按钮。</p></div>
+            <div><small>AFTER</small><p>文档并入 Explore；Pools 与 LP 收益独立分组，周期筛选和操作图标统一。</p></div>
+          </article>
+          <article>
+            <b>05 / REWARDS</b>
+            <h4>奖励路由</h4>
+            <div><small>BEFORE</small><p>推荐收益、等级、任务与完成状态缺少清晰的阅读先后关系。</p></div>
+            <div><small>AFTER</small><p>收益概览、佣金等级、任务进度形成连续纵向路径，状态反馈更明确。</p></div>
+          </article>
+          <article>
+            <b>06 / ASSETS & HISTORY</b>
+            <h4>资产与记录</h4>
+            <div><small>BEFORE</small><p>通道、V1 账户、钱包余额和多种交易记录分散在不同位置。</p></div>
+            <div><small>AFTER</small><p>统一资产总览；记录去除冗余 txid，并按 V1 / V3 给出对应状态与去向。</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="swap-iteration" id="swap-iteration">
+      <div class="swap-section-no light" data-swap-reveal><b>03</b><span>FIRST MAJOR UPGRADE / 第一阶段升级</span></div>
+      <div class="swap-iteration-head" data-swap-reveal>
+        <h2>把策略落实到<br />每一个决策点。</h2>
+        <p>第一次大改版建立了关键骨架：Swap 成为核心、图表与记录可控、代币按协议分类、Pool 与 Explore 共享同一套数据操作语言。</p>
+      </div>
+      <figure class="swap-stage swap-stage-main" data-swap-reveal>
+        <img width="1280" height="720" loading="lazy" decoding="async" src="/public/swap/iteration-swap.png" alt="Swap 第一次 UI/UE 大改版的交易页面" />
+        <figcaption><small>01 / SWAP CORE</small><h3>交易、价格与记录<br />形成主次关系</h3><p>兑换模块稳定居中，价格图和历史信息留在同一工作区，但不再抢占首要操作。</p></figcaption>
+      </figure>
+      <div class="swap-iteration-grid">
+        <figure data-swap-reveal><img width="1280" height="720" loading="lazy" decoding="async" src="/public/swap/token-selector.png" alt="按协议分类的代币选择界面" /><figcaption><small>02 / TOKEN SELECTOR</small><h3>协议差异集中处理</h3><p>全部、RUNES、BRC20、Stablecoin、Fractal 与 ARC20 进入同一选择层。</p></figcaption></figure>
+        <figure data-swap-reveal><img width="1280" height="720" loading="lazy" decoding="async" src="/public/swap/pools.png" alt="重构后的流动池页面" /><figcaption><small>03 / POOL</small><h3>列表与操作并行</h3><p>池子列表、个人记录与注入面板共享筛选、表格和状态语言。</p></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="swap-result" id="swap-result">
+      <div class="swap-section-no" data-swap-reveal><b>04</b><span>FINAL EXPERIENCE / 最终体验</span></div>
+      <div class="swap-result-head" data-swap-reveal>
+        <small>REAL PRODUCT / BEFORE & AFTER</small>
+        <h2>从入口到子页面，<br />逐路由验证升级。</h2>
+      </div>
+      <div class="swap-compare-title" data-swap-reveal><b>ROUTE 01</b><h3>SWAP / 交易主路径</h3><span>协议、图表、记录与交易框的主次重排</span></div>
+      <div class="swap-real-compare" data-swap-reveal>
+        <figure>
+          <div><b>BEFORE</b><span>系统选项持续外露</span></div>
+          <img width="2560" height="1155" loading="lazy" decoding="async" src="/public/swap/before-swap-route.jpg" alt="实际改版前 Swap 交易路由完整截图" />
+          <figcaption>协议类型、链切换、图表、代币信息、交易记录与榜单共同占据工作区，交易任务被大量辅助信息包围。</figcaption>
+        </figure>
+        <figure>
+          <div><b>AFTER</b><span>任务先行，信息按需</span></div>
+          <img width="2560" height="1155" loading="lazy" decoding="async" src="/public/swap/after-swap.jpg" alt="实际改版后 Swap 页面完整截图" />
+          <figcaption>打开即进入 Pay / Receive，价格图、池内交易与订单历史成为可展开的辅助信息。</figcaption>
+        </figure>
+      </div>
+      <div class="swap-compare-title swap-compare-title-secondary" data-swap-reveal><b>ROUTE 02</b><h3>ACCOUNT / 资产工作区</h3><span>个人池、资产余额与账户状态的重新编排</span></div>
+      <div class="swap-real-compare" data-swap-reveal>
+        <figure>
+          <div><b>BEFORE</b><span>历史与池子分离</span></div>
+          <img width="2560" height="1155" loading="lazy" decoding="async" src="/public/swap/before-pool.jpg" alt="实际改版前个人流动池路由截图" />
+          <figcaption>旧版把“您的池子”和历史记录作为并列导航，筛选、操作和费率说明缺少一致的层级语言。</figcaption>
+        </figure>
+        <figure>
+          <div><b>AFTER</b><span>资产关系集中呈现</span></div>
+          <img width="2560" height="1181" loading="lazy" decoding="async" src="/public/swap/after-assets-data.png?v=20260730g" alt="测试环境中包含真实数据的 Swap On Nexus Assets 页面" />
+          <figcaption>测试环境的 Assets 页面用真实余额验证了新结构：Total、Wallet、Bitcoin Channel 与 Account(V1) 在同一行完成对照，可用与池中状态也保持连续。</figcaption>
+        </figure>
+      </div>
+      <div class="swap-outcomes" data-swap-reveal>
+        <article><b>ENTRY</b><span>首页 → 交易入口</span><strong>打开即 Swap</strong></article>
+        <article><b>HIERARCHY</b><span>信息同时出现</span><strong>主任务 + 按需信息</strong></article>
+        <article><b>MENTAL MODEL</b><span>先理解协议</span><strong>先选择资产与方式</strong></article>
+        <article><b>VISUAL</b><span>背景承担氛围</span><strong>界面承担秩序</strong></article>
+      </div>
+      <a class="swap-related-brand" href="/onnexus-brand.html" data-swap-reveal>
+        <span><small>RELATED BRAND CASE</small><strong>On Nexus Brand System</strong></span>
+        <p>从 Logo、安全区、颜色和字体，到 Pattern 与跨媒介应用，查看独立品牌使用指南项目。</p>
+        <b>OPEN BRAND CASE ↗</b>
+      </a>
+    </section>
+
+    <section class="swap-system" id="swap-system">
+      <div class="swap-section-no light" data-swap-reveal><b>05</b><span>SYSTEM IN PRACTICE / 系统化落地</span></div>
+      <div class="swap-system-intro" data-swap-reveal>
+        <h2>不是只改<br />一个 Swap 框。</h2>
+        <p>同一套层级、表格、状态与反馈语言被扩展到 Explore、Rewards、资产管理和全局提示，使复杂金融信息在不同页面仍保持一致。</p>
+      </div>
+      <div class="swap-motion-system" data-swap-reveal>
+        <div class="swap-motion-copy">
+          <small>BACKGROUND MOTION / 动态品牌层</small>
+          <h3>背景持续流动，<br />界面保持稳定。</h3>
+          <p>产品背景不是静态渐变：暗紫与蓝色光场以低频率缓慢移动，网格和粒子提供空间深度，关键区域再用局部高光聚焦。动态承担品牌氛围，交易和资产信息始终保持清晰、稳定。</p>
+          <ul><li><b>01</b>低频光场建立持续生命力</li><li><b>02</b>微弱网格维持 Web3 空间感</li><li><b>03</b>高光只服务于关键操作区域</li></ul>
+        </div>
+        <div class="swap-motion-stage" aria-label="Swap On Nexus 动态背景视觉演示">
+          <div class="swap-motion-grid" aria-hidden="true"></div>
+          <i class="swap-motion-cloud cloud-one" aria-hidden="true"></i>
+          <i class="swap-motion-cloud cloud-two" aria-hidden="true"></i>
+          <i class="swap-motion-cloud cloud-three" aria-hidden="true"></i>
+          <span class="swap-motion-scan" aria-hidden="true"></span>
+          <div class="swap-motion-panel">
+            <small>LIVE BACKGROUND / SYSTEM</small>
+            <strong>AMBIENT<br />DEPTH<br /><em>FOCUS</em></strong>
+            <div><span>FLOW / 12S</span><span>CONTRAST / LOW</span><span>CONTENT / STABLE</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="swap-system-gallery">
+        <figure class="system-explore" data-swap-reveal><img width="2560" height="1211" loading="lazy" decoding="async" src="/public/swap/after-explore.jpg" alt="实际改版后的 Explore 数据页面" /><figcaption><b>EXPLORE</b><span>真实产品路由：指标概览、文档入口、Pools 与 LP Leaderboard 形成连续的数据阅读路径。</span></figcaption></figure>
+        <figure class="system-feedback" data-swap-reveal>
+          <div class="swap-feedback-demo" aria-label="在新版真实产品页面上展示四类轻量反馈组件">
+            <img width="2560" height="1155" loading="lazy" decoding="async" src="/public/swap/after-swap.jpg?v=20260724x" alt="Swap On Nexus 新版交易页面" />
+            <div class="swap-feedback-stack" aria-hidden="true">
+              <span class="swap-feedback-toast is-success"><i>✓</i><b>Success</b><small>Transaction confirmed</small></span>
+              <span class="swap-feedback-toast is-warning"><i>!</i><b>Warning</b><small>Check network status</small></span>
+              <span class="swap-feedback-toast is-error"><i>×</i><b>Error</b><small>Transaction rejected</small></span>
+              <span class="swap-feedback-toast is-info"><i>i</i><b>Info</b><small>Route has been updated</small></span>
+            </div>
+          </div>
+          <figcaption><b>FEEDBACK</b><span>在新版真实交易页面上演示成功、警告、错误与信息状态；反馈轻量、可关闭，并在完成后自动消失。</span></figcaption>
+        </figure>
+        <figure class="system-assets" data-swap-reveal><img width="2560" height="1181" loading="lazy" decoding="async" src="/public/swap/after-assets-data.png?v=20260730g" alt="测试环境中包含真实数据的 Swap On Nexus Assets 页面" /><figcaption><b>ASSETS</b><span>测试环境真实数据：BTC、FB 与多种 Runes 的 Wallet、Bitcoin Channel、Account(V1) 总额及可用状态在同一张表中完成对照。</span></figcaption></figure>
+        <figure class="system-rewards" data-swap-reveal><img width="2560" height="1211" loading="lazy" decoding="async" src="/public/swap/after-rewards-live.jpg" alt="实际改版后的 Rewards 页面" /><figcaption><b>REWARDS</b><span>真实产品路由：收益概览、时间趋势与任务被组织为“看结果—看变化—去行动”的路径。</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="swap-reflection" id="swap-reflection">
+      <div class="swap-section-no" data-swap-reveal><b>06</b><span>REFLECTION / 复盘</span></div>
+      <div class="swap-reflection-copy" data-swap-reveal>
+        <small>WHAT THIS PROJECT PROVED</small>
+        <h2>Web3 产品的专业感，<br />不是展示更多复杂性。</h2>
+        <p>真正的升级，是让协议、通道、费用和状态在用户需要时出现，在不需要时退后。视觉改版只有和信息架构、交互路径以及真实业务规则一起发生，才会转化为更好的产品体验。</p>
+      </div>
+      <div class="swap-reflection-note" data-swap-reveal>
+        <span>DESIGN PRINCIPLE</span>
+        <strong>复杂性不会消失，<br />但可以被放在正确的位置。</strong>
+      </div>
+      <a class="swap-next" href="/onnexus-brand.html">
+        <small>NEXT CASE / 02</small>
+        <span>ON NEXUS</span>
+        <b>↗</b>
+      </a>
+      <nav class="case-cycle-nav" aria-label="案例循环导航" data-swap-reveal>
+        <a href="/lightcdn.html"><small>PREVIOUS CASE / 06</small><span>← LightCDN</span></a>
+        <a href="/index.html#index"><small>ALL PROJECTS / 01—06</small><span>返回作品集目录 ↗</span></a>
+      </nav>
+    </section>
+  </main>
+  <script>
+    const swapRoot = document.querySelector('#swap-case');
+    const updateSwapProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      swapRoot.style.setProperty('--swap-scroll', max > 0 ? scrollY / max : 0);
+    };
+    addEventListener('scroll', updateSwapProgress, { passive: true });
+    updateSwapProgress();
+    const swapObserver = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add('is-visible')), { threshold: .12 });
+    document.querySelectorAll('[data-swap-reveal]').forEach((node) => swapObserver.observe(node));
+  </script>
+</body>
+</html>

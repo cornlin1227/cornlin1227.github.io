@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="swapGlow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ff8a3d"/><stop offset=".55" stop-color="#8a4dff"/><stop offset="1" stop-color="#547cff"/></linearGradient>
+    <radialGradient id="swapHalo"><stop stop-color="#8a4dff" stop-opacity=".34"/><stop offset="1" stop-color="#8a4dff" stop-opacity="0"/></radialGradient>
+    <pattern id="swapGrid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".055"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#07070a"/><rect width="1200" height="630" fill="url(#swapGrid)"/>
+  <circle cx="868" cy="312" r="270" fill="url(#swapHalo)"/>
+  <text x="68" y="78" fill="#ff8a3d" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">CASE 01 · DEX EXPERIENCE REDESIGN</text>
+  <text x="65" y="225" fill="#f5f3ee" font-family="Helvetica Neue,Arial,sans-serif" font-size="104" font-weight="800" letter-spacing="-7">SWAP ON</text>
+  <text x="65" y="327" fill="none" stroke="#f5f3ee" stroke-width="1.5" font-family="Helvetica Neue,Arial,sans-serif" font-size="104" font-weight="800" letter-spacing="-7">NEXUS</text>
+  <text x="70" y="387" fill="#989aa8" font-family="Helvetica Neue,Arial,sans-serif" font-size="18">把协议复杂性，整理成一次清晰行动。</text>
+  <path d="M70 485H1090" stroke="#fff" stroke-opacity=".16"/><path d="M70 485H885" stroke="url(#swapGlow)" stroke-width="3"/>
+  <g font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">
+    <g transform="translate(70 448)"><rect width="138" height="48" rx="24" fill="#11121a" stroke="#ff8a3d"/><text x="69" y="30" text-anchor="middle" fill="#ff8a3d">REMOVE</text></g>
+    <g transform="translate(258 448)"><rect width="132" height="48" rx="24" fill="#11121a" stroke="#8a4dff"/><text x="66" y="30" text-anchor="middle" fill="#d7c4ff">MERGE</text></g>
+    <g transform="translate(440 448)"><rect width="116" height="48" rx="24" fill="#11121a" stroke="#8a4dff"/><text x="58" y="30" text-anchor="middle" fill="#d7c4ff">HIDE</text></g>
+    <g transform="translate(606 448)"><rect width="168" height="48" rx="24" fill="#11121a" stroke="#547cff"/><text x="84" y="30" text-anchor="middle" fill="#b9c7ff">RELOCATE</text></g>
+  </g>
+  <g transform="translate(832 126)">
+    <rect width="292" height="285" rx="24" fill="#101119" stroke="#ffffff" stroke-opacity=".16"/>
+    <text x="28" y="46" fill="#8f91a1" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" letter-spacing="2">ONE ACTION ROUTE</text>
+    <path d="M38 186C95 186 86 94 146 94s52 92 108 92" fill="none" stroke="url(#swapGlow)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="38" cy="186" r="10" fill="#ff8a3d"/><circle cx="146" cy="94" r="10" fill="#8a4dff"/><circle cx="254" cy="186" r="10" fill="#547cff"/>
+    <text x="28" y="252" fill="#f5f3ee" font-family="Helvetica Neue,Arial,sans-serif" font-size="28" font-weight="700">OPEN.</text><text x="132" y="252" fill="#8a4dff" font-family="Helvetica Neue,Arial,sans-serif" font-size="28" font-weight="700">CHOOSE.</text><text x="28" y="282" fill="#f5f3ee" font-family="Helvetica Neue,Arial,sans-serif" font-size="28" font-weight="700">SWAP.</text>
+  </g>
+  <text x="70" y="585" fill="#686a76" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" letter-spacing="2">2025.06 · INDEPENDENT END-TO-END DESIGN</text>
+</svg>
