@@ -5,7 +5,500 @@
   --line: rgba(255, 255, 255, 0.18);
 }
 
+/* Approved homepage posters already contain their complete visual language. */
+body.home-v4 .project-selector .showcase-panel::before,
+body.home-v4 .project-selector .showcase-caption,
+body.home-v4 .project-selector .showcase-media::before,
+body.home-v4 .project-selector .showcase-media::after,
+body.home-v4 .project-selector .showcase-media > :not(.project-cover-art) {
+  display:none!important;
+  content:none!important;
+}
+body.home-v4 .project-selector .showcase-media > .project-cover-art {
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+
+/* Final project selector: the approved artwork is already a complete poster.
+   Keep the right side visually pure; project facts live in the left tabs. */
+body.home-v4 .project-selector .showcase-panel::before,
+body.home-v4 .project-selector .showcase-caption,
+body.home-v4 .project-selector .showcase-media::before,
+body.home-v4 .project-selector .showcase-media::after,
+body.home-v4 .project-selector .showcase-media > :not(.project-cover-art) {
+  display:none!important;
+  content:none!important;
+}
+body.home-v4 .project-selector .showcase-media > .project-cover-art {
+  position:absolute;
+  z-index:2;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
+
+/* Final homepage gallery lock: keep legacy tab-showcase rules from overriding the new cover wall. */
+body.home-v4 .index-section .project-showcase.project-gallery {
+  height:auto;
+  min-height:0;
+  display:block;
+  overflow:visible;
+  border:0;
+  background:transparent;
+}
+body.home-v4 .project-gallery .project-tabs.gallery-data-tabs,
+body.home-v4 .project-gallery .mobile-project-nav { display:none!important; }
+body.home-v4 .project-gallery .showcase-stage.project-grid {
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(12px,1.35vw,22px);
+  min-height:0;
+  overflow:visible;
+  background:transparent;
+}
+body.home-v4 .project-gallery .showcase-panel,
+body.home-v4 .project-gallery .showcase-panel.is-active {
+  position:relative;
+  inset:auto;
+  display:block;
+  aspect-ratio:1.36 / 1;
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Project covers are art-directed from the work itself. Generated/photographic artwork
+   supplies material and spatial character; the live caption keeps project facts exact. */
+body.home-v4 .project-gallery .project-cover-art {
+  position:absolute;
+  z-index:2;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .9s cubic-bezier(.16,.78,.18,1),filter .45s ease;
+}
+body.home-v4 .project-gallery .showcase-media > :not(.project-cover-art) { display:none!important; }
+body.home-v4 .project-gallery .showcase-media::after {
+  display:block!important;
+  z-index:3;
+  background:linear-gradient(180deg,rgba(5,6,7,0) 34%,rgba(5,6,7,.12) 54%,rgba(5,6,7,.9) 100%);
+}
+body.home-v4 .project-gallery .showcase-caption { z-index:5; }
+body.home-v4 .project-gallery .showcase-panel:hover .project-cover-art,
+body.home-v4 .project-gallery .showcase-panel:focus-within .project-cover-art { transform:scale(1.035); }
+body.home-v4 .project-gallery .showcase-caption h3 {
+  max-width:88%;
+  font-size:clamp(22px,1.9vw,33px);
+  line-height:1.02;
+  letter-spacing:-.055em;
+}
+body.home-v4 .project-gallery .showcase-caption p {
+  display:block;
+  margin:0;
+  color:rgba(255,255,255,.72);
+  font-size:clamp(7px,.58vw,10px);
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+/* 01 — trading poster: interface is the field; the promise sits in the dark opening. */
+body.home-v4 .project-gallery .panel-swap .showcase-caption {
+  inset:22px 22px auto auto;
+  width:43%;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  text-align:right;
+}
+body.home-v4 .project-gallery .panel-swap .showcase-caption h3 { max-width:none;font-size:clamp(27px,2.7vw,46px);line-height:.9; }
+body.home-v4 .project-gallery .panel-swap .showcase-caption > b { margin-top:10px; }
+body.home-v4 .project-gallery .panel-swap .showcase-media::after { background:linear-gradient(135deg,transparent 44%,rgba(4,4,8,.82) 100%); }
+
+/* 02 — identity poster: the symbol is treated like an exhibition object. */
+body.home-v4 .project-gallery .panel-brand-system .showcase-caption {
+  inset:22px 22px auto;
+  display:grid;
+  grid-template-columns:1fr auto;
+  text-align:center;
+}
+body.home-v4 .project-gallery .panel-brand-system .showcase-caption > span { text-align:left; }
+body.home-v4 .project-gallery .panel-brand-system .showcase-caption h3 {
+  grid-column:1 / -1;
+  margin-top:clamp(118px,10vw,168px);
+  max-width:none;
+  font-size:clamp(25px,2.45vw,42px);
+  line-height:.9;
+  text-transform:uppercase;
+}
+body.home-v4 .project-gallery .panel-brand-system .showcase-caption p { grid-column:1 / -1; }
+body.home-v4 .project-gallery .panel-brand-system .showcase-caption > b { position:absolute;right:0;top:0; }
+
+/* 03 — research poster: the journey literally travels from product to statement. */
+body.home-v4 .project-gallery .panel-yesoul .showcase-caption {
+  left:auto;
+  right:6%;
+  top:15%;
+  bottom:auto;
+  width:47%;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  color:#181315;
+}
+body.home-v4 .project-gallery .panel-yesoul .showcase-caption > span,
+body.home-v4 .project-gallery .panel-yesoul .showcase-caption p { color:rgba(35,25,28,.62); }
+body.home-v4 .project-gallery .panel-yesoul .showcase-caption h3 { max-width:none;font-size:clamp(29px,3.05vw,51px);line-height:.88; }
+body.home-v4 .project-gallery .panel-yesoul .showcase-caption > b { margin-top:14px;background:#ff3b42; }
+body.home-v4 .project-gallery .panel-yesoul .showcase-caption > b::after { color:white; }
+body.home-v4 .project-gallery .panel-yesoul .showcase-media::after { background:linear-gradient(90deg,rgba(255,246,232,.08),transparent 56%); }
+
+/* 04 — campaign poster: oversized global call, product is supporting evidence. */
+body.home-v4 .project-gallery .panel-sport .showcase-caption {
+  inset:auto auto 7% 6%;
+  width:52%;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+body.home-v4 .project-gallery .panel-sport .showcase-caption h3 { max-width:none;font-size:clamp(36px,4.1vw,68px);line-height:.72;letter-spacing:-.075em; }
+body.home-v4 .project-gallery .panel-sport .showcase-caption > b { position:absolute;right:-74%;bottom:0; }
+body.home-v4 .project-gallery .panel-sport .showcase-media::after { background:linear-gradient(90deg,rgba(18,3,29,.86),transparent 66%); }
+
+/* 05 — enterprise poster: a precise label locks to the system rail. */
+body.home-v4 .project-gallery .panel-ziniao .showcase-caption {
+  inset:0 auto 0 0;
+  width:32%;
+  padding:24px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:flex-start;
+  background:linear-gradient(180deg,rgba(4,32,72,.05),rgba(3,31,69,.96));
+}
+body.home-v4 .project-gallery .panel-ziniao .showcase-caption h3 { max-width:none;font-size:clamp(25px,2.55vw,43px);line-height:.93; }
+body.home-v4 .project-gallery .panel-ziniao .showcase-caption > b { position:absolute;left:20px;top:22px;background:#2071ff; }
+body.home-v4 .project-gallery .panel-ziniao .showcase-caption > b::after { color:white; }
+body.home-v4 .project-gallery .panel-ziniao .showcase-media::after { background:linear-gradient(90deg,rgba(3,30,66,.68),transparent 42%); }
+
+/* 06 — service poster: airy product collage above, editorial band below. */
+body.home-v4 .project-gallery .panel-lightcdn .showcase-caption {
+  left:0;
+  right:0;
+  bottom:0;
+  min-height:34%;
+  padding:16px 22px 18px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  grid-template-rows:auto 1fr auto;
+  color:#172b39;
+  background:rgba(255,255,255,.94);
+}
+body.home-v4 .project-gallery .panel-lightcdn .showcase-caption > span,
+body.home-v4 .project-gallery .panel-lightcdn .showcase-caption p { color:rgba(23,43,57,.58); }
+body.home-v4 .project-gallery .panel-lightcdn .showcase-caption h3 { max-width:none;font-size:clamp(27px,2.8vw,47px);line-height:.88; }
+body.home-v4 .project-gallery .panel-lightcdn .showcase-caption > b { background:#ff9225; }
+body.home-v4 .project-gallery .panel-lightcdn .showcase-caption > b::after { color:white; }
+body.home-v4 .project-gallery .panel-lightcdn .showcase-media::after { display:none!important; }
+
+/* Homepage covers v5 — poster artwork inside, clear case information outside. */
+body.home-v4 .project-gallery .showcase-panel,
+body.home-v4 .project-gallery .showcase-panel.is-active {
+  aspect-ratio:auto;
+  overflow:visible;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+body.home-v4 .project-gallery .showcase-panel:hover,
+body.home-v4 .project-gallery .showcase-panel:focus-within {
+  transform:translateY(-6px);
+  box-shadow:none;
+}
+body.home-v4 .project-gallery .showcase-link { position:relative;inset:auto;display:block; }
+body.home-v4 .project-gallery .showcase-media {
+  position:relative;
+  inset:auto;
+  aspect-ratio:1.48 / 1;
+  overflow:hidden;
+  border:1px solid rgba(9,10,9,.24);
+  border-radius:clamp(10px,1vw,16px);
+  background:#090a09;
+  transform:translateZ(0);
+  box-shadow:0 1px 0 rgba(255,255,255,.18) inset;
+}
+body.home-v4 .project-gallery .showcase-panel:hover .showcase-media,
+body.home-v4 .project-gallery .showcase-panel:focus-within .showcase-media { transform:none; }
+body.home-v4 .project-gallery .showcase-media > :not(.project-cover-art):not(.cover-poster-copy) { display:none!important; }
+body.home-v4 .project-gallery .showcase-media::after { display:none!important; }
+
+body.home-v4 .project-gallery .showcase-caption,
+body.home-v4 .project-gallery :is(.panel-swap,.panel-brand-system,.panel-yesoul,.panel-sport,.panel-ziniao,.panel-lightcdn) .showcase-caption {
+  position:relative;
+  inset:auto;
+  width:auto;
+  min-height:0;
+  padding:17px 3px 6px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  grid-template-rows:auto auto auto;
+  gap:7px 14px;
+  align-items:start;
+  color:#0a0b0a;
+  text-align:left;
+  background:transparent;
+}
+body.home-v4 .project-gallery .showcase-caption > span {
+  grid-column:1;
+  grid-row:1;
+  color:rgba(9,10,9,.48);
+  font-size:7px;
+  letter-spacing:.14em;
+}
+body.home-v4 .project-gallery .showcase-caption h3,
+body.home-v4 .project-gallery :is(.panel-swap,.panel-brand-system,.panel-yesoul,.panel-sport,.panel-ziniao,.panel-lightcdn) .showcase-caption h3 {
+  grid-column:1;
+  grid-row:2;
+  max-width:none;
+  margin:0;
+  color:#0a0b0a;
+  font-size:clamp(18px,1.4vw,25px);
+  line-height:1.15;
+  letter-spacing:-.04em;
+  text-transform:none;
+}
+body.home-v4 .project-gallery .showcase-caption p,
+body.home-v4 .project-gallery :is(.panel-swap,.panel-brand-system,.panel-yesoul,.panel-sport,.panel-ziniao,.panel-lightcdn) .showcase-caption p {
+  grid-column:1;
+  grid-row:3;
+  display:block;
+  max-width:92%;
+  margin:0;
+  color:rgba(9,10,9,.58);
+  font-size:clamp(10px,.78vw,13px);
+  font-weight:400;
+  line-height:1.55;
+  letter-spacing:0;
+}
+body.home-v4 .project-gallery .showcase-caption > b,
+body.home-v4 .project-gallery :is(.panel-swap,.panel-brand-system,.panel-yesoul,.panel-sport,.panel-ziniao,.panel-lightcdn) .showcase-caption > b {
+  position:static;
+  grid-column:2;
+  grid-row:1 / 4;
+  align-self:center;
+  margin:0;
+  width:36px;
+  height:36px;
+  background:#0a0b0a;
+}
+body.home-v4 .project-gallery .showcase-caption > b::after { color:white; }
+
+body.home-v4 .project-gallery .cover-poster-copy {
+  position:absolute;
+  z-index:4;
+  display:flex!important;
+  flex-direction:column;
+  pointer-events:none;
+  font-family:Arial,"PingFang SC",sans-serif;
+}
+/* The legacy gallery lock above hides every non-image child with a more specific
+   selector. Re-enable the art-directed poster layer explicitly. */
+body.home-v4 .project-gallery .showcase-media > .cover-poster-copy {
+  display:flex!important;
+}
+body.home-v4 .project-gallery .project-cover-art.is-integrated-poster ~ .cover-poster-copy {
+  display:none!important;
+}
+body.home-v4 .project-gallery .cover-poster-copy small {
+  font-size:clamp(5px,.45vw,8px);
+  font-weight:800;
+  line-height:1;
+  letter-spacing:.16em;
+}
+body.home-v4 .project-gallery .cover-poster-copy strong {
+  margin-top:12px;
+  font-size:clamp(32px,3.8vw,64px);
+  font-weight:900;
+  line-height:.76;
+  letter-spacing:-.085em;
+}
+body.home-v4 .project-gallery .cover-poster-copy strong em { font-style:normal; }
+body.home-v4 .project-gallery .cover-poster-copy span {
+  margin-top:15px;
+  font-size:clamp(6px,.55vw,9px);
+  font-weight:750;
+  letter-spacing:.08em;
+}
+
+body.home-v4 .project-gallery .poster-swap { top:9%;right:6%;align-items:flex-end;color:white;text-align:right; }
+body.home-v4 .project-gallery .poster-swap strong em { color:#9a66ff; }
+body.home-v4 .project-gallery .poster-brand { inset:7% 6%;color:#f4f1e9;align-items:center;text-align:center; }
+body.home-v4 .project-gallery .poster-brand strong { margin-top:6%;font-size:clamp(56px,7vw,112px);color:#ff8a18;letter-spacing:-.14em; }
+body.home-v4 .project-gallery .poster-brand strong i { color:#ece8df;font-style:normal;font-weight:300; }
+body.home-v4 .project-gallery .poster-brand span { margin-top:auto;padding:7px 11px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(7,7,8,.34);backdrop-filter:blur(8px); }
+body.home-v4 .project-gallery .poster-yesoul { top:12%;right:5%;width:45%;color:#171214; }
+body.home-v4 .project-gallery .poster-yesoul strong { font-size:clamp(34px,4.2vw,70px); }
+body.home-v4 .project-gallery .poster-yesoul strong em { color:#f33f3f; }
+body.home-v4 .project-gallery .poster-sport { left:6%;bottom:8%;color:white; }
+body.home-v4 .project-gallery .poster-sport strong { font-size:clamp(40px,5.2vw,86px); }
+body.home-v4 .project-gallery .poster-sport strong em { color:#ff8b28; }
+body.home-v4 .project-gallery .poster-ziniao { left:0;top:0;bottom:0;width:39%;padding:8% 5%;justify-content:flex-end;color:#fff;background:linear-gradient(90deg,rgba(2,25,66,.97),rgba(2,31,76,.86) 76%,transparent); }
+body.home-v4 .project-gallery .poster-ziniao small { margin-bottom:auto;max-width:150px;line-height:1.35; }
+body.home-v4 .project-gallery .poster-ziniao strong { text-shadow:0 3px 22px rgba(0,13,50,.3); }
+body.home-v4 .project-gallery .poster-ziniao strong em { color:#78a9ff; }
+body.home-v4 .project-gallery .poster-lightcdn { left:5%;bottom:7%;width:39%;padding:3% 4%;color:#142b3d;background:rgba(255,255,255,.68);border-left:3px solid #f28a1c;backdrop-filter:blur(9px); }
+body.home-v4 .project-gallery .poster-lightcdn strong { font-size:clamp(36px,4.5vw,74px); }
+body.home-v4 .project-gallery .poster-lightcdn strong em { color:#f28a1c; }
+
+@media(max-width:700px) {
+  body.home-v4 .project-gallery .showcase-panel,
+  body.home-v4 .project-gallery .showcase-panel.is-active { aspect-ratio:auto; }
+  body.home-v4 .project-gallery .showcase-media { aspect-ratio:1.48 / 1; }
+  body.home-v4 .project-gallery .cover-poster-copy strong { font-size:clamp(38px,10vw,62px); }
+}
+
+/* Each crop follows its project's visual argument rather than a shared template. */
+body.home-v4 .project-gallery .panel-swap .project-cover-art { object-position:42% 52%; }
+body.home-v4 .project-gallery .panel-brand-system .project-cover-art { object-position:center 48%; }
+body.home-v4 .project-gallery .panel-yesoul .project-cover-art { object-position:43% center; }
+body.home-v4 .project-gallery .panel-sport .project-cover-art { object-position:center 40%; }
+body.home-v4 .project-gallery .panel-ziniao .project-cover-art { object-position:53% center; }
+body.home-v4 .project-gallery .panel-lightcdn .project-cover-art { object-position:center 40%; }
+
+body.home-v4 .project-gallery .panel-brand-system .showcase-media::after {
+  background:linear-gradient(180deg,transparent 32%,rgba(7,7,8,.08) 52%,rgba(7,7,8,.92) 100%);
+}
+body.home-v4 .project-gallery .panel-yesoul .showcase-media::after,
+body.home-v4 .project-gallery .panel-lightcdn .showcase-media::after {
+  background:linear-gradient(180deg,transparent 28%,rgba(8,8,8,.05) 48%,rgba(8,8,8,.83) 100%);
+}
+@media(max-width:1100px) {
+  body.home-v4 .project-gallery .showcase-stage.project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:700px) {
+  body.home-v4 .project-gallery .showcase-stage.project-grid { grid-template-columns:1fr; }
+  body.home-v4 .project-gallery .showcase-panel,
+  body.home-v4 .project-gallery .showcase-panel.is-active { aspect-ratio:1.18 / 1;min-height:0; }
+}
+
 img { height:auto; }
+
+/* HOMEPAGE SELECTOR / approved one-shot Swap poster ------------------------
+   The selected raster already contains the complete art direction. Keep the
+   preview free of legacy mockups and duplicate copy so it reads as one poster. */
+body.home-v4 .project-selector .panel-swap .showcase-media > .project-cover-art {
+  position:absolute;
+  z-index:2;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+  object-position:center;
+  transform:scale(1.002);
+  transition:transform .9s cubic-bezier(.16,.78,.18,1),filter .45s ease;
+}
+body.home-v4 .project-selector .panel-swap .showcase-media {
+  background:#020207;
+}
+body.home-v4 .project-selector .panel-swap .showcase-media > :not(.project-cover-art) {
+  display:none!important;
+}
+body.home-v4 .project-selector .panel-swap .showcase-media::before,
+body.home-v4 .project-selector .panel-swap .showcase-media::after,
+body.home-v4 .project-selector .panel-swap .showcase-caption {
+  display:none!important;
+}
+body.home-v4 .project-selector .panel-swap:hover .project-cover-art,
+body.home-v4 .project-selector .panel-swap:focus-within .project-cover-art {
+  transform:scale(1.025);
+}
+
+/* ── SWAP COVER STUDY / three independent campaign directions ───── */
+.cover-concepts-page {
+  margin:0;
+  color:#f4f1e9;
+  background:#070708;
+  font-family:Arial,"PingFang SC",sans-serif;
+}
+.concepts-head {
+  min-height:74vh;
+  padding:40px clamp(22px,5vw,84px) 70px;
+  display:grid;
+  grid-template-columns:.45fr 1.4fr .65fr;
+  gap:5vw;
+  align-items:end;
+  border-bottom:1px solid rgba(255,255,255,.2);
+}
+.concepts-head>a { align-self:start;color:#f4f1e9;font-size:10px;letter-spacing:.12em; }
+.concepts-head small,.concept-item header>span { color:#a779ff;font-size:9px;font-weight:800;letter-spacing:.16em; }
+.concepts-head h1 { margin:24px 0 0;font-size:clamp(60px,8.7vw,150px);line-height:.79;letter-spacing:-.085em; }
+.concepts-head p { margin:0;color:rgba(244,241,233,.62);font-size:13px;line-height:1.8; }
+.concepts-list { padding:0 clamp(18px,4vw,68px) 12vw; }
+.concept-item { padding:10vw 0 4vw;border-bottom:1px solid rgba(255,255,255,.18); }
+.concept-item>header { margin:0 0 34px;display:grid;grid-template-columns:.35fr .65fr 1fr;gap:3vw;align-items:end; }
+.concept-item h2 { margin:0;font-size:clamp(35px,4vw,66px);line-height:.9;letter-spacing:-.06em; }
+.concept-item header p { max-width:430px;margin:0;color:rgba(244,241,233,.58);font-size:12px;line-height:1.7; }
+.swap-poster { position:relative;margin:0;aspect-ratio:16 / 9;overflow:hidden;background:#09090c;isolation:isolate; }
+.swap-poster .poster-bg { position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover; }
+.swap-poster :is(.cinema-ui,.editorial-ui,.kinetic-ui) { position:absolute;z-index:3;overflow:hidden;background:#090a0e;box-shadow:0 35px 90px rgba(0,0,0,.55); }
+.swap-poster :is(.cinema-ui,.editorial-ui,.kinetic-ui) img { width:100%;height:100%;object-fit:cover; }
+
+.swap-poster-cinema::after { content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(3,3,6,.86),transparent 56%),linear-gradient(0deg,rgba(2,2,4,.48),transparent 45%); }
+.cinema-copy { position:absolute;z-index:5;left:5.4%;top:8%;color:#fff; }
+.cinema-copy small,.kinetic-copy small,.editorial-copy small { font-size:clamp(6px,.68vw,12px);font-weight:800;letter-spacing:.18em; }
+.cinema-copy strong { display:block;margin-top:6vh;font-size:clamp(62px,9.4vw,160px);line-height:.68;letter-spacing:-.095em; }
+.cinema-copy strong em { color:#9e6dff;font-style:normal; }
+.cinema-copy p { margin:24px 0 0;color:rgba(255,255,255,.7);font-size:clamp(9px,.9vw,15px);letter-spacing:.08em; }
+.cinema-ui { right:7%;top:18%;width:47%;height:59%;border:1px solid rgba(255,255,255,.35);border-radius:18px;transform:perspective(1500px) rotateY(-13deg) rotateZ(-2deg); }
+.cinema-ui img { object-position:center;filter:brightness(1.24) contrast(1.08); }
+.cinema-meta { position:absolute;z-index:5;left:5.5%;bottom:7%;display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.62);font-size:8px;font-weight:800;letter-spacing:.12em; }
+.cinema-meta i { width:20px;height:1px;background:#c07cff; }
+.poster-mark { position:absolute;z-index:5;right:3.5%;top:4%;color:rgba(255,255,255,.8);font-size:18px; }
+
+.swap-poster-editorial { color:#111;background:#f2eee6; }
+.swap-poster-editorial::after { content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(248,245,238,.12),transparent 60%); }
+.editorial-copy { position:absolute;z-index:5;left:5%;top:9%;width:50%; }
+.editorial-copy strong { display:block;margin-top:8vh;font-size:clamp(62px,9.1vw,154px);line-height:.72;letter-spacing:-.1em; }
+.editorial-copy strong em { color:#6c3fd5;font-style:normal; }
+.editorial-copy p { max-width:310px;margin:24px 0 0;padding-left:18px;border-left:3px solid #ff6f20;font-size:clamp(9px,.9vw,15px);line-height:1.65; }
+.editorial-ui { right:5%;top:16%;width:46%;height:60%;border:1px solid rgba(12,12,15,.34);transform:rotate(3.5deg); }
+.editorial-ui img { object-position:center;filter:brightness(1.22) contrast(1.05); }
+.editorial-index { position:absolute;z-index:6;left:5%;bottom:7%;display:flex;align-items:flex-end;gap:16px; }
+.editorial-index b { color:#ff6f20;font-size:52px;line-height:.75; }
+.editorial-index span { font-size:8px;font-weight:800;line-height:1.5;letter-spacing:.13em; }
+.editorial-stamp { position:absolute;z-index:6;right:5%;bottom:5%;padding:9px 12px;border:1px solid #111;border-radius:999px;font-size:7px;font-weight:800;letter-spacing:.13em; }
+
+.swap-poster-kinetic::after { content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(1,4,13,.78),transparent 50%); }
+.kinetic-copy { position:absolute;z-index:5;left:5%;top:7%; }
+.kinetic-copy strong { display:block;margin-top:6vh;color:#fff;font-size:clamp(58px,8.6vw,146px);line-height:.68;letter-spacing:-.09em; }
+.kinetic-copy strong em { color:#ff7b2c;font-style:normal; }
+.kinetic-ui { left:43%;top:18%;width:50%;height:61%;border:1px solid rgba(116,135,255,.55);border-radius:12px;transform:perspective(1600px) rotateY(-8deg) rotateZ(2deg);box-shadow:0 0 70px rgba(84,70,255,.25),0 38px 90px rgba(0,0,0,.6); }
+.kinetic-ui img { object-position:center;filter:brightness(1.34) contrast(1.12); }
+.kinetic-tag { position:absolute;z-index:6;left:5%;bottom:6%;display:flex;gap:8px; }
+.kinetic-tag span { padding:7px 10px;border:1px solid rgba(255,255,255,.34);border-radius:999px;color:#fff;background:rgba(2,5,15,.45);font-size:7px;font-weight:800;letter-spacing:.1em;backdrop-filter:blur(8px); }
+.kinetic-arrow { position:absolute;z-index:6;right:4%;top:5%;width:48px;height:48px;display:grid;place-items:center;border-radius:50%;color:#071020;background:#ff7b2c;font-size:22px;font-weight:900; }
+
+@media(max-width:760px) {
+  .concepts-head { min-height:72vh;grid-template-columns:1fr;align-content:space-between; }
+  .concepts-head p { max-width:520px; }
+  .concept-item>header { grid-template-columns:1fr; }
+  .swap-poster { aspect-ratio:4 / 3; }
+  .cinema-copy strong,.editorial-copy strong,.kinetic-copy strong { font-size:12vw; }
+  .cinema-ui { width:54%;right:2%; }
+  .editorial-ui { width:50%;right:2%; }
+  .kinetic-ui { left:42%;width:56%; }
+}
 
 /* CASE 02 — YESOUL SPORT */
 .global-page { --g-red:#ff3b52; --g-violet:#7040ff; --g-cyan:#55ddd1; --g-ink:#09090c; --global-scroll:0; min-height:100vh; overflow:clip; background:#0a0a0d; color:#f8f5ee; }
@@ -335,6 +828,362 @@ a { color: inherit; text-decoration: none; }
   .case-cycle-nav a { padding:10px 0; }
   .case-cycle-nav a:last-child { align-items:flex-start;text-align:left; }
   .l-footer>a:nth-of-type(2) { text-align:center; }
+}
+
+/* Homepage / project wall — six complete covers, visible at a glance. */
+.home-v4 .project-gallery {
+  height:auto;
+  min-height:0;
+  display:block;
+  overflow:visible;
+  border:0;
+  background:transparent;
+}
+.home-v4 .project-gallery .gallery-data-tabs,
+.home-v4 .project-gallery .mobile-project-nav { display:none!important; }
+.home-v4 .project-gallery .project-grid {
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(12px,1.35vw,22px);
+  min-height:0;
+  overflow:visible;
+  color:var(--v4-paper);
+  background:transparent;
+  isolation:auto;
+}
+.home-v4 .project-gallery .showcase-panel,
+.home-v4 .project-gallery .showcase-panel.is-active {
+  position:relative;
+  inset:auto;
+  display:block;
+  aspect-ratio:1.36 / 1;
+  min-width:0;
+  overflow:hidden;
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+  border:1px solid rgba(9,10,9,.22);
+  border-radius:clamp(10px,1vw,16px);
+  background:#090a09;
+  box-shadow:0 1px 0 rgba(255,255,255,.2) inset;
+  transform:translateZ(0);
+  transition:transform .48s cubic-bezier(.16,.78,.18,1),box-shadow .48s,border-color .3s;
+}
+.home-v4 .project-gallery .showcase-panel::before {
+  content:attr(id);
+  position:absolute;
+  z-index:8;
+  top:17px;
+  left:19px;
+  color:rgba(255,255,255,.65);
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  pointer-events:none;
+}
+.home-v4 .project-gallery .showcase-panel:hover,
+.home-v4 .project-gallery .showcase-panel:focus-within {
+  z-index:3;
+  border-color:rgba(9,10,9,.48);
+  box-shadow:0 24px 58px rgba(9,10,9,.2);
+  transform:translateY(-8px);
+}
+.home-v4 .project-gallery .showcase-link,
+.home-v4 .project-gallery .showcase-media {
+  position:absolute;
+  inset:0;
+  display:block;
+}
+.home-v4 .project-gallery .showcase-link:focus-visible {
+  outline:3px solid var(--v4-accent);
+  outline-offset:-6px;
+}
+.home-v4 .project-gallery .showcase-media {
+  transition:transform .75s cubic-bezier(.16,.78,.18,1),filter .4s;
+}
+.home-v4 .project-gallery .showcase-panel:hover .showcase-media,
+.home-v4 .project-gallery .showcase-panel:focus-within .showcase-media { transform:scale(1.025); }
+.home-v4 .project-gallery .showcase-media::after {
+  z-index:5;
+  background:linear-gradient(180deg,transparent 35%,rgba(7,8,8,.12) 52%,rgba(7,8,8,.92) 100%);
+}
+.home-v4 .project-gallery .showcase-caption {
+  left:clamp(18px,1.55vw,27px);
+  right:clamp(18px,1.55vw,27px);
+  bottom:clamp(17px,1.45vw,25px);
+  display:grid;
+  grid-template-columns:1fr auto;
+  grid-template-rows:auto auto;
+  gap:8px 14px;
+  align-items:end;
+}
+.home-v4 .project-gallery .showcase-caption > span {
+  grid-column:1 / -1;
+  grid-row:1;
+  padding:0;
+  color:rgba(255,255,255,.62);
+  font-size:7px;
+}
+.home-v4 .project-gallery .showcase-caption span small { display:none; }
+.home-v4 .project-gallery .showcase-caption h3 {
+  grid-column:1;
+  grid-row:2;
+  max-width:82%;
+  font-size:clamp(23px,2.25vw,39px);
+  line-height:.88;
+}
+.home-v4 .project-gallery .showcase-caption p { display:none; }
+.home-v4 .project-gallery .showcase-caption > b {
+  grid-column:2;
+  grid-row:2;
+  min-width:0;
+  width:38px;
+  height:38px;
+  padding:0;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  color:transparent;
+  background:rgba(255,255,255,.96);
+  border-radius:50%;
+}
+.home-v4 .project-gallery .showcase-caption > b::after {
+  content:"↗";
+  color:#090a09;
+  font-size:14px;
+}
+.home-v4 .project-gallery .art-type {
+  font-size:clamp(48px,4.9vw,82px);
+  line-height:.75;
+}
+.home-v4 .project-gallery .cover-code {
+  position:absolute;
+  z-index:7;
+  top:17px;
+  left:19px;
+  right:19px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  color:rgba(255,255,255,.68);
+  font-size:6px;
+  font-weight:800;
+  letter-spacing:.13em;
+  pointer-events:none;
+}
+.home-v4 .project-gallery .cover-code b { color:rgba(255,255,255,.45);font-size:inherit; }
+.home-v4 .project-gallery .cover-code-dark { color:rgba(9,10,9,.7); }
+.home-v4 .project-gallery .cover-code-dark b { color:rgba(9,10,9,.42); }
+.home-v4 .project-gallery .showcase-panel::before { display:none; }
+
+/* 01 / Swap — focused terminal, dense and precise. */
+.home-v4 .project-gallery .panel-swap .showcase-browser {
+  width:82%;
+  left:13%;
+  top:16%;
+  border-radius:10px;
+  transform:rotate(-2deg);
+}
+.home-v4 .project-gallery .panel-swap .showcase-browserbar { height:24px; }
+.home-v4 .project-gallery .panel-swap .art-type { left:5%;top:13%; }
+.home-v4 .project-gallery .panel-swap .art-type span { color:#ff8a3d; }
+.home-v4 .project-gallery .swap-route {
+  position:absolute;
+  z-index:4;
+  right:6%;
+  top:10%;
+  width:38%;
+  height:40%;
+  border-top:3px solid #8b5cff;
+  border-right:3px solid #507cff;
+  border-radius:0 80% 0 0;
+  transform:rotate(-7deg);
+  filter:drop-shadow(0 0 8px rgba(120,81,255,.55));
+}
+.home-v4 .project-gallery .swap-route i {
+  position:absolute;
+  width:9px;
+  aspect-ratio:1;
+  border-radius:50%;
+  background:#8b5cff;
+  box-shadow:0 0 0 6px rgba(139,92,255,.16);
+}
+.home-v4 .project-gallery .swap-route i:nth-child(1) { left:-4px;top:-6px;background:#ff8a3d; }
+.home-v4 .project-gallery .swap-route i:nth-child(2) { left:48%;top:-6px; }
+.home-v4 .project-gallery .swap-route i:nth-child(3) { right:-6px;bottom:-4px;background:#507cff; }
+
+/* 02 / ON NEXUS — the identity behaves as a visual world, not a product screenshot. */
+.home-v4 .project-gallery .brand-showcase-type {
+  left:6%;
+  top:14%;
+  max-width:76%;
+  font-size:clamp(40px,4vw,68px);
+  line-height:.78;
+}
+.home-v4 .project-gallery .panel-brand-system .showcase-media {
+  background:linear-gradient(90deg,#f0f1f4 0 46%,#ff9218 46% 100%);
+}
+.home-v4 .project-gallery .panel-brand-system .showcase-media::after {
+  background:linear-gradient(180deg,transparent 48%,rgba(11,13,18,.86) 100%);
+}
+.home-v4 .project-gallery .panel-brand-system .brand-showcase-world {
+  right:-9%;left:auto;width:61%;opacity:.32;mix-blend-mode:multiply;
+}
+.home-v4 .project-gallery .panel-brand-system .brand-showcase-type { color:#0b0d12; }
+.home-v4 .project-gallery .panel-brand-system .cover-code { color:rgba(11,13,18,.72); }
+.home-v4 .project-gallery .panel-brand-system .cover-code b { color:rgba(11,13,18,.45); }
+.home-v4 .project-gallery .brand-showcase-mark { right:6%;top:6%;font-size:clamp(27px,3vw,48px); }
+
+/* 03 / YESOUL — warm editorial composition around the finished application. */
+.home-v4 .project-gallery .panel-yesoul .art-type { left:6%;top:13%; }
+.home-v4 .project-gallery .yesoul-showcase-device {
+  width:49%;
+  right:4%;
+  top:5%;
+  transform:rotate(4deg);
+}
+.home-v4 .project-gallery .panel-yesoul .art-type span { color:#ff3547; }
+.home-v4 .project-gallery .yesoul-proof {
+  position:absolute;
+  z-index:4;
+  left:6%;
+  bottom:29%;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:rgba(23,18,20,.6);
+  font-size:5px;
+  font-weight:800;
+  letter-spacing:.11em;
+}
+.home-v4 .project-gallery .yesoul-proof i { width:21px;height:1px;background:#ff3547; }
+
+/* 04 / SPORT — one global product screen and a loud kinetic greeting. */
+.home-v4 .project-gallery .sport-hello {
+  left:6%;
+  top:14%;
+  font-size:clamp(51px,5.8vw,94px);
+}
+.home-v4 .project-gallery .sport-hello span { color:#ff4b67; }
+.home-v4 .project-gallery .sport-streak {
+  position:absolute;
+  z-index:3;
+  left:-4%;
+  right:22%;
+  top:43%;
+  height:23%;
+  transform:rotate(-8deg);
+}
+.home-v4 .project-gallery .sport-streak i {
+  position:absolute;
+  left:0;
+  right:0;
+  height:8px;
+  border-radius:99px;
+  background:linear-gradient(90deg,#ff455f,#ff9a2f,#e8ed45,#42dbc6,#6654ff);
+  opacity:.9;
+}
+.home-v4 .project-gallery .sport-streak i:nth-child(2) { top:16px;left:12%;right:-8%;opacity:.35; }
+.home-v4 .project-gallery .sport-streak i:nth-child(3) { top:32px;left:25%;right:-15%;opacity:.15; }
+.home-v4 .project-gallery .sport-showcase-phone {
+  width:26%;
+  height:72%;
+  top:8%;
+  right:11%;
+  border-width:5px;
+  border-radius:24px;
+}
+
+/* 05 / ZINIAO — an ordered B2B workspace with architectural depth. */
+.home-v4 .project-gallery .panel-ziniao .art-type { left:6%;top:14%; }
+.home-v4 .project-gallery .ziniao-showcase-window {
+  width:74%;
+  right:-12%;
+  top:18%;
+  border-radius:8px;
+  transform:rotate(-4deg);
+}
+.home-v4 .project-gallery .panel-ziniao .art-type span { color:#8eb3ff; }
+.home-v4 .project-gallery .ziniao-ghost-window {
+  position:absolute;
+  z-index:1;
+  width:51%;
+  height:43%;
+  right:1%;
+  top:12%;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:8px;
+}
+.home-v4 .project-gallery .ziniao-ghost-window.ghost-a { transform:translate(-9%,-4%); }
+.home-v4 .project-gallery .ziniao-ghost-window.ghost-b { transform:translate(-18%,-8%);opacity:.55; }
+.home-v4 .project-gallery .ziniao-domain-rail { left:6%;top:53%; }
+.home-v4 .project-gallery .ziniao-domain-rail span { padding:5px 7px;font-size:5px; }
+
+/* 06 / LightCDN — bright, light and globally approachable. */
+.home-v4 .project-gallery .panel-lightcdn .art-type {
+  left:5%;
+  top:12%;
+  font-size:clamp(42px,4.4vw,74px);
+}
+.home-v4 .project-gallery .panel-lightcdn .art-type span { color:#ff7f24; }
+.home-v4 .project-gallery .cdn-path {
+  position:absolute;
+  z-index:4;
+  right:5%;
+  top:10%;
+  width:36%;
+  aspect-ratio:1;
+  border:1px solid rgba(21,64,89,.2);
+  border-radius:50%;
+  box-shadow:0 0 0 22px rgba(255,255,255,.3),0 0 0 44px rgba(21,64,89,.05);
+}
+.home-v4 .project-gallery .cdn-path i {
+  position:absolute;
+  width:10px;
+  aspect-ratio:1;
+  border:2px solid white;
+  border-radius:50%;
+  background:#ffac21;
+}
+.home-v4 .project-gallery .cdn-path i:nth-child(1) { left:7%;top:42%; }
+.home-v4 .project-gallery .cdn-path i:nth-child(2) { left:46%;top:14%;background:#ff7622; }
+.home-v4 .project-gallery .cdn-path i:nth-child(3) { right:10%;bottom:17%;background:#7552f5; }
+.home-v4 .project-gallery .lightcdn-showcase-browser {
+  width:72%;
+  right:-5%;
+  top:20%;
+  border-radius:9px;
+}
+.home-v4 .project-gallery .lightcdn-showcase-browser .showcase-browserbar { height:23px; }
+
+@media(min-width:1500px) {
+  .home-v4 .project-gallery .project-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media(max-width:1100px) {
+  .home-v4 .project-gallery .project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .home-v4 .project-gallery .showcase-panel,
+  .home-v4 .project-gallery .showcase-panel.is-active { aspect-ratio:1.42 / 1; }
+  .home-v4 .project-gallery .showcase-caption h3 { font-size:clamp(26px,4vw,40px); }
+  .home-v4 .project-gallery .art-type { font-size:clamp(52px,7vw,78px); }
+}
+@media(max-width:700px) {
+  .home-v4 .index-section { padding-inline:14px; }
+  .home-v4 .project-gallery .project-grid { grid-template-columns:1fr;gap:14px; }
+  .home-v4 .project-gallery .showcase-panel,
+  .home-v4 .project-gallery .showcase-panel.is-active { aspect-ratio:1.18 / 1;min-height:0; }
+  .home-v4 .project-gallery .showcase-panel:hover,
+  .home-v4 .project-gallery .showcase-panel:focus-within { transform:none;box-shadow:none; }
+  .home-v4 .project-gallery .showcase-caption h3 { font-size:32px; }
+  .home-v4 .project-gallery .showcase-caption > b { width:36px;height:36px; }
+  .home-v4 .project-gallery .art-type { font-size:16vw; }
+  .home-v4 .project-gallery .brand-showcase-type { font-size:12vw; }
+  .home-v4 .project-gallery .sport-hello { font-size:17vw; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .home-v4 .project-gallery .showcase-panel,
+  .home-v4 .project-gallery .showcase-media { transition:none!important;transform:none!important; }
 }
 
 .about-section { padding:140px 5vw; color:#111; background:#e8ff5a; }
@@ -5657,6 +6506,66 @@ button:focus-visible {
   }
 }
 
+/* Final responsive atomic polish / 2026-08-13
+   Keep the visual language untouched while making the small-screen geometry
+   deliberate: every persistent navigation action gets a reliable tap area,
+   and compact project controls no longer feel under-sized beside the posters. */
+@media (max-width:820px) {
+  .swap-nav a,
+  .brand-case-nav a,
+  .case-nav a,
+  .global-nav a,
+  .ziniao-nav a,
+  .l-nav a {
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+  }
+
+  .case-back,
+  .global-back,
+  .ziniao-back,
+  .l-nav > a:first-child {
+    gap:10px;
+  }
+
+  .case-scroll-cue,
+  .global-scroll,
+  .ziniao-scroll,
+  .l-scroll {
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+  }
+
+  .l-footer > a,
+  .l-footer > div > a {
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+}
+
+@media (max-width:760px) {
+  body.home-v4 .mobile-project-nav {
+    min-height:58px;
+    padding-right:10px;
+  }
+
+  body.home-v4 .mobile-project-nav button {
+    width:42px;
+    height:42px;
+  }
+
+  /* The selector is a finished 16:9 artwork followed immediately by the
+     next content chapter. Do not retain a viewport filler after it. */
+  body.home-v4 .project-showcase.project-selector,
+  body.home-v4 .project-showcase.project-selector .showcase-stage {
+    min-height:0!important;
+  }
+}
+
 @media(max-width:520px) {
   .home-v3 .hero-typefield { min-height:760px; }
   .home-v3 .type-field { inset:16vh -25vw 12vh; }
@@ -6366,11 +7275,12 @@ button:focus-visible {
 .home-v4 .tab-name {
   display:block;
   overflow:hidden;
-  font-size:clamp(21px,2vw,34px);
+  font-size:clamp(18px,1.65vw,29px);
   font-weight:800;
+  line-height:.98;
   letter-spacing:-.055em;
-  white-space:nowrap;
-  text-overflow:ellipsis;
+  white-space:normal;
+  text-wrap:balance;
 }
 .home-v4 .tab-name small {
   display:block;
@@ -10551,5 +11461,161 @@ button:focus-visible {
   .image-lightbox-scale {
     min-height:42px;
     padding-inline:12px;
+  }
+}
+
+/* Homepage project selector — final override. The selected artwork is the
+   complete cover; all project facts remain exclusively in the left tabs. */
+body.home-v4 .project-showcase.project-selector .showcase-panel::before,
+body.home-v4 .project-showcase.project-selector .showcase-caption,
+body.home-v4 .project-showcase.project-selector .showcase-media::before,
+body.home-v4 .project-showcase.project-selector .showcase-media::after,
+body.home-v4 .project-showcase.project-selector .showcase-media > :not(.project-cover-art) {
+  display:none!important;
+  content:none!important;
+}
+body.home-v4 .project-showcase.project-selector .showcase-media > .project-cover-art {
+  position:absolute!important;
+  z-index:2!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+
+/* Homepage covers are finished 1672 x 941 posters. On narrow screens keep
+   that ratio intact and scale the complete artwork instead of cropping it. */
+@media(max-width:900px) {
+  body.home-v4 .project-showcase.project-selector .showcase-stage {
+    width:100%;
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:1672 / 941;
+    background:#080808;
+  }
+
+  body.home-v4 .project-showcase.project-selector .showcase-media > .project-cover-art {
+    object-fit:contain!important;
+  }
+}
+
+/* Mobile vertical rhythm audit / 2026-08-13
+   Desktop case studies use generous 90–115px section gutters. On phones that
+   reads as missing content, so content sections use a tighter, repeatable
+   rhythm while visual heroes retain their deliberate breathing room. */
+@media(max-width:760px) {
+  body.home-v4 :is(.index-section,.about-section,.profile,.capability-index) {
+    padding-top:64px!important;
+    padding-bottom:64px!important;
+  }
+
+  /* The project selector now ends with a 16:9 poster. Do not keep the old
+     viewport-height floor, otherwise tall/mobile screenshots show a large
+     empty field beneath the poster. */
+  body.home-v4 .index-section {
+    min-height:0!important;
+    height:auto!important;
+  }
+
+  :is(
+    #swap-problem,
+    #swap-strategy,
+    #swap-iteration,
+    #swap-result,
+    #swap-system,
+    #swap-reflection,
+    #overview,
+    #chapter-02.research-section,
+    #chapter-03.insight-section,
+    #chapter-04.strategy-section,
+    #chapter-05.design-section,
+    #chapter-06.reflection-section,
+    #global-context,
+    #global-users,
+    #chapter-03.global-opportunity,
+    #chapter-04.global-directions,
+    #global-system,
+    #chapter-06.global-product,
+    #global-end,
+    #ziniao-context,
+    #ziniao-structure,
+    #ziniao-system,
+    #ziniao-product,
+    #ziniao-client,
+    #ziniao-end,
+    #brand-brief,
+    #brand-strategy,
+    #brand-delivery,
+    #brief.l-brief,
+    #light-strategy,
+    #light-exploration,
+    #light-system,
+    #light-interaction,
+    #light-pages,
+    #light-result
+  ) {
+    padding-top:64px!important;
+    padding-bottom:64px!important;
+  }
+
+  /* Short closing chapters should end with their content, not an inherited
+     viewport-sized empty field. */
+  :is(
+    #swap-reflection,
+    #chapter-06.reflection-section,
+    #global-end,
+    #ziniao-end,
+    #light-result
+  ) {
+    min-height:0!important;
+  }
+
+  body.home-v4 #contact {
+    min-height:0!important;
+    padding-top:64px!important;
+    padding-bottom:64px!important;
+  }
+
+  #onnexus-brand-case .brand-case-content {
+    padding-bottom:64px!important;
+  }
+
+  /* Keep a clear but intentional hand-off between a chapter heading and its
+     first content block. */
+  :is(
+    #swap-case,
+    #yesoul-case,
+    #global-case,
+    #ziniao-case,
+    #onnexus-brand-case,
+    .light-case
+  ) :is(.section-heading,.chapter-head,.section-head,.swap-section-head,.l-section-head) {
+    margin-bottom:40px!important;
+  }
+}
+
+@media(max-width:520px) {
+  body.home-v4 :is(.index-section,.about-section,.profile,.capability-index),
+  :is(
+    #swap-problem,#swap-strategy,#swap-iteration,#swap-result,#swap-system,#swap-reflection,
+    #overview,#chapter-02.research-section,#chapter-03.insight-section,
+    #chapter-04.strategy-section,#chapter-05.design-section,#chapter-06.reflection-section,
+    #global-context,#global-users,#chapter-03.global-opportunity,#chapter-04.global-directions,
+    #global-system,#chapter-06.global-product,#global-end,
+    #ziniao-context,#ziniao-structure,#ziniao-system,#ziniao-product,#ziniao-client,#ziniao-end,
+    #brand-brief,#brand-strategy,#brand-delivery,
+    #brief.l-brief,#light-strategy,#light-exploration,#light-system,#light-interaction,
+    #light-pages,#light-result
+  ) {
+    padding-top:52px!important;
+    padding-bottom:52px!important;
+  }
+
+  body.home-v4 #contact,
+  #onnexus-brand-case .brand-case-content {
+    padding-top:52px!important;
+    padding-bottom:52px!important;
   }
 }

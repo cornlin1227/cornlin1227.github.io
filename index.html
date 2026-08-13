@@ -19,11 +19,11 @@
   <meta name="twitter:image:alt" content="Simon 产品体验设计作品集封面" />
   <title>Simon — Product Experience Designer</title>
   <link rel="icon" type="image/png" href="/public/favicon.png" />
-  <link rel="stylesheet" href="/app/globals.css?v=20260811a" />
+  <link rel="stylesheet" href="/app/globals.css?v=20260812j" />
   <script src="/app/enhancements.js?v=20260811a" defer></script>
   <script src="/public/vendor/gsap.min.js?v=3.13.0" defer></script>
   <script src="/public/vendor/ScrollTrigger.min.js?v=3.13.0" defer></script>
-  <script src="/app/home-motion.js?v=20260811a" defer></script>
+  <script src="/app/home-motion.js?v=20260812h" defer></script>
 </head>
 <body class="home-v4">
   <a class="skip-link" href="#index">跳到项目目录</a>
@@ -64,110 +64,133 @@
       <div class="section-head" data-reveal>
         <span>SELECTED WORK / 01—06</span>
         <h2>六个项目，<br />六种解法。</h2>
-        <p>选择左侧项目查看核心成果，点击右侧画面进入完整案例。</p>
+        <p>每张封面先呈现项目最具代表性的成果与气质，点击进入完整设计过程。</p>
       </div>
-      <div class="project-showcase" data-reveal>
+      <div class="project-showcase project-selector" data-reveal>
         <div class="project-tabs" role="tablist" aria-label="精选项目">
           <button class="project-tab is-active" id="project-tab-01" type="button" role="tab" aria-selected="true" aria-controls="project-panel-01" data-project="0">
-            <span class="tab-no">01</span><span class="tab-name">Swap On Nexus<small><em>PRODUCT</em>DEX EXPERIENCE REDESIGN</small></span><span class="tab-arrow">↗</span>
+            <span class="tab-no">01</span><span class="tab-name">DEX 交易体验重构<small><em>PRODUCT</em>SWAP ON NEXUS · 2025</small></span><span class="tab-arrow">↗</span>
           </button>
           <button class="project-tab" id="project-tab-02" type="button" role="tab" aria-selected="false" aria-controls="project-panel-02" data-project="1" tabindex="-1">
-            <span class="tab-no">02</span><span class="tab-name">ON NEXUS<small><em>VISUAL SYSTEM</em>BRAND IDENTITY SYSTEM</small></span><span class="tab-arrow">↗</span>
+            <span class="tab-no">02</span><span class="tab-name">ON NEXUS 品牌系统<small><em>VISUAL SYSTEM</em>BRAND IDENTITY · 2026</small></span><span class="tab-arrow">↗</span>
           </button>
           <button class="project-tab" id="project-tab-03" type="button" role="tab" aria-selected="false" aria-controls="project-panel-03" data-project="2" tabindex="-1">
-            <span class="tab-no">03</span><span class="tab-name">YESOUL<small><em>PRODUCT</em>RESEARCH-LED PRODUCT REDESIGN</small></span><span class="tab-arrow">↗</span>
+            <span class="tab-no">03</span><span class="tab-name">YESOUL 体验链路重构<small><em>PRODUCT</em>RESEARCH-LED REDESIGN · 2022</small></span><span class="tab-arrow">↗</span>
           </button>
           <button class="project-tab" id="project-tab-04" type="button" role="tab" aria-selected="false" aria-controls="project-panel-04" data-project="3" tabindex="-1">
-            <span class="tab-no">04</span><span class="tab-name">YESOUL SPORT<small><em>VISUAL SYSTEM</em>GLOBAL VISUAL EXPERIENCE</small></span><span class="tab-arrow">↗</span>
+            <span class="tab-no">04</span><span class="tab-name">YESOUL SPORT 视觉升级<small><em>VISUAL SYSTEM</em>GLOBAL EXPERIENCE · 2022</small></span><span class="tab-arrow">↗</span>
           </button>
           <button class="project-tab" id="project-tab-05" type="button" role="tab" aria-selected="false" aria-controls="project-panel-05" data-project="4" tabindex="-1">
-            <span class="tab-no">05</span><span class="tab-name">紫鸟浏览器<small><em>PRODUCT</em>COMPLEX B2B PRODUCT SYSTEM</small></span><span class="tab-arrow">↗</span>
+            <span class="tab-no">05</span><span class="tab-name">紫鸟 B 端产品体系<small><em>PRODUCT</em>COMPLEX B2B SYSTEM · 2021</small></span><span class="tab-arrow">↗</span>
           </button>
           <button class="project-tab" id="project-tab-06" type="button" role="tab" aria-selected="false" aria-controls="project-panel-06" data-project="5" tabindex="-1">
-            <span class="tab-no">06</span><span class="tab-name">LightCDN<small><em>VISUAL SYSTEM</em>GLOBAL CDN VISUAL EXPERIENCE</small></span><span class="tab-arrow">↗</span>
+            <span class="tab-no">06</span><span class="tab-name">LightCDN Web 体验系统<small><em>VISUAL SYSTEM</em>GLOBAL CDN EXPERIENCE · 2023</small></span><span class="tab-arrow">↗</span>
           </button>
         </div>
 
-        <div class="mobile-project-nav" aria-label="项目切换控制">
+        <div class="mobile-project-nav" aria-label="项目切换控制" hidden>
           <span><b data-project-current>01</b><i>/ 06</i><small>SWIPE OR TAP</small></span>
           <div>
             <button type="button" data-project-prev aria-label="查看上一个项目">←</button>
             <button type="button" data-project-next aria-label="查看下一个项目">→</button>
           </div>
         </div>
-        <p class="sr-only" id="project-status" role="status" aria-live="polite">当前项目：Swap On Nexus，1 / 6</p>
+        <p class="sr-only" id="project-status">六个精选项目</p>
 
         <div class="showcase-stage" aria-describedby="project-status">
           <article class="showcase-panel is-active panel-swap" id="project-panel-01" role="tabpanel" aria-labelledby="project-tab-01" aria-hidden="false">
             <a class="showcase-link" href="/swap.html" aria-label="查看 Swap On Nexus 完整案例">
               <div class="showcase-media">
+                <img class="project-cover-art is-integrated-poster" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async" src="/public/covers/swap-integrated/swap-cover-a-cinematic.png?v=20260812i" alt="Swap On Nexus 交易体验重构电影感海报封面" />
+                <div class="cover-poster-copy poster-swap" aria-hidden="true"><small>DEX PRODUCT REDESIGN / 2025</small><strong>TRADE<br /><em>DIRECT.</em></strong><span>复杂交易，一步抵达</span></div>
+                <div class="cover-code" aria-hidden="true"><span>01 / PRODUCT REDESIGN</span><b>OPEN · CHOOSE · SWAP</b></div>
                 <div class="showcase-browser">
                   <div class="showcase-browserbar" aria-hidden="true"><i></i><i></i><i></i><span>swap.on.nexus</span></div>
                   <img width="2560" height="1155" loading="eager" fetchpriority="high" decoding="async" src="/public/swap/after-swap.jpg?v=20260724y" alt="Swap On Nexus 改版后的交易页面" />
                 </div>
-                <strong class="art-type">TRADE<br />WITHOUT<br />DETOURS.</strong>
+                <strong class="art-type">SWAP<span>.</span></strong>
+                <div class="swap-route" aria-hidden="true"><i></i><i></i><i></i></div>
               </div>
-              <div class="showcase-caption"><span>01 / WEB3 PRODUCT<small><i>PRODUCT CASE</i>2025.06 · 独立全链路设计 · 已上线</small></span><h3>Swap On Nexus</h3><p>删除首页绕行、重组协议与记录，让复杂 DEX 打开后即可开始交易。</p><b>OPEN CASE ↗</b></div>
+              <div class="showcase-caption"><span>01 / PRODUCT DESIGN</span><h3>Swap On Nexus — DEX 交易体验重构</h3><p>重组交易、协议与记录路径，让复杂产品打开后即可开始。</p><b>OPEN CASE ↗</b></div>
             </a>
           </article>
 
           <article class="showcase-panel panel-brand-system" id="project-panel-02" role="tabpanel" aria-labelledby="project-tab-02" aria-hidden="true" inert>
             <a class="showcase-link" href="/onnexus-brand.html" aria-label="查看 ON NEXUS 品牌系统完整案例">
               <div class="showcase-media">
+                <img class="project-cover-art is-integrated-poster" width="1672" height="941" loading="lazy" decoding="async" src="/public/covers/onnexus-brand-concepts/onnexus-cover-a-portal.png?v=20260813a" alt="ON NEXUS 品牌系统——连接之门概念海报" />
+                <div class="cover-poster-copy poster-brand" aria-hidden="true"><small>BRAND IDENTITY SYSTEM</small><strong><i>(</i>N<i>)</i></strong><span>BOUNDARY · NODE · CONNECTION</span></div>
+                <div class="cover-code" aria-hidden="true"><span>02 / BRAND IDENTITY</span><b>BOUNDARY · NODE · CONNECTION</b></div>
                 <img class="brand-showcase-world" width="1672" height="941" loading="lazy" fetchpriority="low" decoding="async" src="/public/brand/onnexus-system/visual-world.jpg" alt="由括号、节点与连接关系构成的 ON NEXUS 三维品牌视觉世界" />
                 <div class="brand-showcase-grid" aria-hidden="true"></div>
                 <span class="brand-showcase-mark" aria-hidden="true">(N)</span>
-                <strong class="brand-showcase-type">BOUNDARY.<br />NODE.<br />CONNECTION.</strong>
+                <strong class="brand-showcase-type">ON<br />NEXUS</strong>
                 <div class="brand-showcase-nodes" aria-hidden="true"><i></i><i></i><i></i></div>
               </div>
-              <div class="showcase-caption"><span>02 / BRAND SYSTEM<small><i>VISUAL SYSTEM</i>2026.04 · 独立负责全案 · 持续应用</small></span><h3>ON NEXUS</h3><p>把标志、视觉世界、IP、产品状态与跨媒介应用组织成可执行的完整品牌系统。</p><b>OPEN CASE ↗</b></div>
+              <div class="showcase-caption"><span>02 / BRAND DESIGN</span><h3>ON NEXUS — 品牌识别与延展设计</h3><p>从核心标志出发，建立视觉世界、品牌应用与跨媒介规范。</p><b>OPEN CASE ↗</b></div>
             </a>
           </article>
 
           <article class="showcase-panel panel-yesoul" id="project-panel-03" role="tabpanel" aria-labelledby="project-tab-03" aria-hidden="true" inert>
             <a class="showcase-link" href="/yesoul.html" aria-label="查看 YESOUL 完整案例">
               <div class="showcase-media">
+                <img class="project-cover-art is-integrated-poster" width="1672" height="941" loading="lazy" decoding="async" src="/public/covers/yesoul-concepts/yesoul-cover-c-ready-when-you-are.png?v=20260813b" alt="YESOUL 体验链路重构——READY WHEN YOU ARE 海报" />
+                <div class="cover-poster-copy poster-yesoul" aria-hidden="true"><small>RESEARCH → EXPERIENCE → RESULT</small><strong>START<br /><em>MOVING</em></strong><span>14 INTERVIEWS / 03 CORE SCENARIOS</span></div>
+                <div class="cover-code cover-code-dark" aria-hidden="true"><span>03 / RESEARCH-LED REDESIGN</span><b>14 INTERVIEWS · 03 CORE SCENARIOS</b></div>
                 <span class="art-orbit" aria-hidden="true"></span>
-                <strong class="art-type">START<br />MOVING.</strong>
+                <strong class="art-type">START<br /><span>MOVING.</span></strong>
                 <img class="yesoul-showcase-device" width="1003" height="1568" loading="lazy" fetchpriority="low" decoding="async" src="/public/mockups/yesoul-hero-mockup-transparent.png?v=20260724y" alt="YESOUL 首页与课程详情最终成果样机" />
+                <div class="yesoul-proof" aria-hidden="true"><span>RESEARCH</span><i></i><span>STRUCTURE</span><i></i><span>RESULT</span></div>
               </div>
-              <div class="showcase-caption"><span>03 / MOBILE PRODUCT<small><i>PRODUCT CASE</i>2022.09 · 主导体验升级 · 已上线</small></span><h3>YESOUL</h3><p>从 14 位用户访谈出发，重构首页、课程路径与教练内容体验。</p><b>OPEN CASE ↗</b></div>
+              <div class="showcase-caption"><span>03 / UX REDESIGN</span><h3>YESOUL — 运动体验链路重构</h3><p>从用户研究出发，重新组织首页、课程路径与教练内容体验。</p><b>OPEN CASE ↗</b></div>
             </a>
           </article>
 
           <article class="showcase-panel panel-sport" id="project-panel-04" role="tabpanel" aria-labelledby="project-tab-04" aria-hidden="true" inert>
             <a class="showcase-link" href="/global.html" aria-label="查看 YESOUL SPORT 完整案例">
               <div class="showcase-media">
-                <strong class="sport-hello">HEY<br />THERE!</strong>
+                <img class="project-cover-art is-integrated-poster" width="1672" height="941" loading="lazy" decoding="async" src="/public/covers/yesoul-sport-concepts/yesoul-sport-cover-a-hey-there.png?v=20260813c" alt="YESOUL SPORT 全球化视觉升级项目封面" />
+                <div class="cover-poster-copy poster-sport" aria-hidden="true"><small>GLOBAL FITNESS EXPERIENCE</small><strong>MOVE<br /><em>LOUD.</em></strong><span>NORTH AMERICA · EUROPE · SEA</span></div>
+                <div class="cover-code" aria-hidden="true"><span>04 / GLOBAL VISUAL EXPERIENCE</span><b>NA · EU · SEA</b></div>
+                <strong class="sport-hello">MOVE<span>!</span></strong>
                 <span class="sport-ring ring-a" aria-hidden="true"></span><span class="sport-ring ring-b" aria-hidden="true"></span>
                 <figure class="sport-showcase-phone"><img width="500" height="2048" loading="lazy" fetchpriority="low" decoding="async" src="/public/global-ui/home.png?v=20260724y" alt="YESOUL SPORT Hey there 首页界面" /></figure>
+                <div class="sport-streak" aria-hidden="true"><i></i><i></i><i></i></div>
               </div>
-              <div class="showcase-caption"><span>04 / GLOBAL FITNESS<small><i>VISUAL SYSTEM</i>2022.11 · 主导视觉升级 · 已上线</small></span><h3>YESOUL SPORT</h3><p>把海外用户洞察转化为更有动感、更具辨识度的运动产品语言。</p><b>OPEN CASE ↗</b></div>
+              <div class="showcase-caption"><span>04 / VISUAL REDESIGN</span><h3>YESOUL SPORT — 全球化视觉升级</h3><p>把海外用户洞察转化为更有动感、更具辨识度的运动语言。</p><b>OPEN CASE ↗</b></div>
             </a>
           </article>
 
           <article class="showcase-panel panel-ziniao" id="project-panel-05" role="tabpanel" aria-labelledby="project-tab-05" aria-hidden="true" inert>
             <a class="showcase-link" href="/ziniao.html" aria-label="查看紫鸟浏览器完整案例">
               <div class="showcase-media">
+                <img class="project-cover-art is-integrated-poster" width="1672" height="941" loading="lazy" decoding="async" src="/public/covers/ziniao-concepts/ziniao-cover-b-control-at-scale.png?v=20260813g" alt="紫鸟浏览器 B 端产品体系——CONTROL AT SCALE 海报封面" />
+                <div class="cover-poster-copy poster-ziniao" aria-hidden="true"><small>COMPLEX B2B PRODUCT SYSTEM</small><strong>ORDER<br /><em>AT SCALE</em></strong><span>STORE / IP / MEMBER / SECURITY</span></div>
+                <div class="cover-code" aria-hidden="true"><span>05 / COMPLEX B2B SYSTEM</span><b>ORDER · SCALE · CONTROL</b></div>
+                <div class="ziniao-ghost-window ghost-a" aria-hidden="true"></div><div class="ziniao-ghost-window ghost-b" aria-hidden="true"></div>
                 <div class="ziniao-showcase-window"><img width="1251" height="841" loading="lazy" fetchpriority="low" decoding="async" src="/public/ziniao-figma/cover.png?v=20260724y" alt="紫鸟浏览器最终产品工作台成果" /></div>
-                <strong class="art-type">ONE<br />WORKSPACE.</strong>
+                <strong class="art-type">ONE<br /><span>WORKSPACE.</span></strong>
                 <div class="ziniao-domain-rail" aria-hidden="true"><span>STORE</span><span>IP</span><span>MEMBER</span><span>SECURITY</span></div>
               </div>
-              <div class="showcase-caption"><span>05 / COMPLEX B2B<small><i>PRODUCT CASE</i>2021.03 · UI 设计 · 已上线</small></span><h3>紫鸟浏览器</h3><p>为多店铺、IP、成员与安全管理建立清晰且可扩展的产品体系。</p><b>OPEN CASE ↗</b></div>
+              <div class="showcase-caption"><span>05 / B2B PRODUCT</span><h3>紫鸟浏览器 — B 端产品体系设计</h3><p>为多店铺、IP、成员与安全管理建立清晰、可扩展的系统秩序。</p><b>OPEN CASE ↗</b></div>
             </a>
           </article>
 
           <article class="showcase-panel panel-lightcdn" id="project-panel-06" role="tabpanel" aria-labelledby="project-tab-06" aria-hidden="true" inert>
             <a class="showcase-link" href="/lightcdn.html" aria-label="查看 LightCDN 完整案例">
               <div class="showcase-media">
+                <img class="project-cover-art is-integrated-poster" width="1672" height="941" loading="lazy" decoding="async" src="/public/covers/lightcdn-concepts/lightcdn-cover-a-light-speed.png?v=20260813e" alt="LightCDN 全球 CDN Web 视觉系统——LIGHT SPEED, WORLDWIDE 海报封面" />
+                <div class="cover-poster-copy poster-lightcdn" aria-hidden="true"><small>GLOBAL CDN WEB EXPERIENCE</small><strong>LIGHT<br /><em>REACH.</em></strong><span>FAST · CLEAR · TRUSTED</span></div>
+                <div class="cover-code cover-code-dark" aria-hidden="true"><span>06 / GLOBAL CDN EXPERIENCE</span><b>LIGHT · FAST · FRIENDLY</b></div>
                 <span class="cdn-orb orb-a" aria-hidden="true"></span><span class="cdn-orb orb-b" aria-hidden="true"></span>
                 <div class="lightcdn-showcase-browser">
                   <div class="showcase-browserbar" aria-hidden="true"><i></i><i></i><i></i><span>lightcdn.com</span></div>
                   <img width="1280" height="720" loading="lazy" fetchpriority="low" decoding="async" src="/public/lightcdn/home.jpg?v=20260727b" alt="LightCDN 官网首页最终成果" />
                 </div>
-                <strong class="art-type">LIGHT.<br />FAST.<br />FRIENDLY.</strong>
+                <strong class="art-type">Light<br /><span>CDN</span></strong>
+                <div class="cdn-path" aria-hidden="true"><i></i><i></i><i></i></div>
               </div>
-              <div class="showcase-caption"><span>06 / VISUAL EXPERIENCE<small><i>VISUAL SYSTEM</i>2023.03 · UE + UI · 已上线</small></span><h3>LightCDN</h3><p>以 2.5D 插画、轻拟态界面与动态反馈，为全球 CDN 建立轻、快、有识别度的视觉体验。</p><b>OPEN CASE ↗</b></div>
+              <div class="showcase-caption"><span>06 / WEB EXPERIENCE</span><h3>LightCDN — 全球 CDN Web 视觉系统</h3><p>用轻量插画、清晰界面与动态反馈塑造可信赖的全球服务体验。</p><b>OPEN CASE ↗</b></div>
             </a>
           </article>
         </div>
