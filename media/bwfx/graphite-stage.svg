@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1500" fill="none">
+ <defs>
+  <linearGradient id="face" x1="180" y1="460" x2="1250" y2="1340" gradientUnits="userSpaceOnUse"><stop stop-color="#2b2d2e"/><stop offset=".5" stop-color="#1d1f20"/><stop offset="1" stop-color="#111213"/></linearGradient>
+  <linearGradient id="edge" x1="0" y1="800" x2="1400" y2="1050" gradientUnits="userSpaceOnUse"><stop stop-color="#515456" stop-opacity="0"/><stop offset=".55" stop-color="#515456" stop-opacity=".45"/><stop offset="1" stop-color="#515456" stop-opacity="0"/></linearGradient>
+  <linearGradient id="lime" x1="900" y1="1500" x2="1400" y2="800" gradientUnits="userSpaceOnUse"><stop stop-color="#d0fa35" stop-opacity="0"/><stop offset=".6" stop-color="#d0fa35" stop-opacity=".22"/><stop offset="1" stop-color="#d0fa35" stop-opacity="0"/></linearGradient>
+ </defs>
+ <path d="M-140 690 1510 350 1260 1130-140 1450Z" fill="url(#face)"/>
+ <path d="M-140 1450 1260 1130 1510 350 1530 395 1290 1165-140 1500Z" fill="#0b0c0d"/>
+ <path d="M-140 690 1510 350M-140 1450 1260 1130 1510 350" stroke="url(#edge)" stroke-width="2"/>
+ <path d="m1290 1165 240-770" stroke="url(#lime)" stroke-width="3"/>
+</svg>

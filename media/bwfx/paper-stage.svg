@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" fill="none">
+ <defs><linearGradient id="plane" x1="150" y1="500" x2="1000" y2="1300" gradientUnits="userSpaceOnUse"><stop stop-color="#e7e8e8"/><stop offset="1" stop-color="#f4f4f5"/></linearGradient><linearGradient id="rim" x1="0" y1="650" x2="1200" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#c9cbcd"/></linearGradient></defs>
+ <path d="M-100 660 1300 330 1300 1300-100 1550Z" fill="url(#plane)"/>
+ <path d="M-100 660 1300 330" stroke="url(#rim)" stroke-width="2"/>
+ <path d="m940 416 150-35" stroke="#bddb52" stroke-width="3"/>
+ <path d="M-100 1190 1300 860" stroke="#d5d7d8" stroke-opacity=".6"/>
+</svg>
