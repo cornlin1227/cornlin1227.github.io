@@ -1,1 +1,5 @@
-{"version": "2026-10-28-entry-flash-fix-v1", "date": "2026-10-28", "changes": ["hide border until initialized", "prevent first-paint SVG stroke flash"]}
+{
+  "version": "2026-10-28-global-review-share-v1",
+  "title": "Corn Lin | UI / UX Designer",
+  "shareImage": "/social/corn-lin-share-v1.png"
+}
