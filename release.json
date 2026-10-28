@@ -1,1 +1,1 @@
-{"version": "2026-10-28-entry-refinement-v1", "date": "2026-10-28", "changes": ["nonblocking intro", "project detail full width", "background project preload", "hero interaction fixes"]}
+{"version": "2026-10-28-entry-flash-fix-v1", "date": "2026-10-28", "changes": ["hide border until initialized", "prevent first-paint SVG stroke flash"]}
