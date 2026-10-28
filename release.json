@@ -1,1 +1,1 @@
-{"version":"2026-10-27-loading-v2","projects":5,"plates":115,"loading":"first-screen-intent-eager-entry-nearby-decode","visual":"existing-artwork-preserved"}
+{"version": "2026-10-28-entry-refinement-v1", "date": "2026-10-28", "changes": ["nonblocking intro", "project detail full width", "background project preload", "hero interaction fixes"]}
