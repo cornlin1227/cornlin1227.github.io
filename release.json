@@ -1,5 +1,9 @@
 {
-  "version": "2026-10-30-employer-names-v1",
-  "title": "Corn Lin | UI / UX Designer",
-  "shareImage": "/social/corn-lin-share-v1.png"
+  "version": "2026-11-03-resume-product-scope-spacing-v1",
+  "date": "2026-11-03",
+  "changes": [
+    "Approved personal strengths and Boquan work scope",
+    "Remove platform coverage phrase",
+    "Resume summary spacing and download filename"
+  ]
 }
